@@ -20,12 +20,12 @@ This journey provides mock Facebook data, a notebook, and comes with 3 pre-built
 
 When the reader has completed this journey, they will understand how to:
 
- * Read external data in to a DSX Jupyter notebook via DSX Object Storage and pandas DataFrames
+ * Read external data in to a DSX Jupyter notebook via DSX Object Storage and pandas DataFrames.
  * Use a Jupyter notebook and Watson APIs to enrich data unstructured data using:
      * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html)
      * [Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html)
      * [Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
- * Use [PixieDust](https://github.com/ibm-cds-labs/pixiedust) to explore data and visualize insights
+ * Visualize and explore the enriched data with [PixieDust](https://github.com/ibm-cds-labs/pixiedust).
 
 ![](doc/source/images/architecture.png)
 
@@ -70,10 +70,10 @@ Follow these steps to setup and run this developer journey. The steps are
 described in detail below.
 
 1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
-1. [Create Bluemix services](#2-create-bluemix-services)
-1. [Create the notebook](#3-create-the-notebook)
-1. [Add the CSV file](#4-add-the-csv-file)
-1. [Add credentials](#5-add-credentials)
+1. [Create the notebook](#2-create-the-notebook)
+1. [Create Bluemix services](#3-create-bluemix-services)
+1. [Add credentials](#4-add-credentials)
+1. [Add the CSV file](#5-add-the-csv-file)
 1. [Run the notebook](#6-run-the-notebook)
 1. [Analyze the results](#7-analyze-the-results)
 1. [Save and share](#8-save-and-share)
@@ -82,18 +82,7 @@ described in detail below.
 
 Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your Bluemix account.
 
-## 2. Create Bluemix services
-
-Create the following Bluemix service by clicking the **Deploy to Bluemix**
-button or by following the links to use the Bluemix UI and create it.
-
-  * [**Visual Recognition**](https://console.ng.bluemix.net/catalog/services/visual-recognition)
-  * [**Natural Language Understanding**](https://console.ng.bluemix.net/catalog/services/natural-language-understanding)
-  * [**Tone Analyzer**](https://console.ng.bluemix.net/catalog/services/tone-analyzer)
-  
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/pixiedust-facebook-analysis)
-
-## 3. Create the notebook
+## 2. Create the notebook
 
 Use the menu on the left to select `My Projects` and then `Default Project`.
 Click on `Add notebooks` (upper right) to create a notebook.
@@ -101,12 +90,35 @@ Click on `Add notebooks` (upper right) to create a notebook.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Enter this Notebook URL: https://github.com/IBM/pixiedust-facebook-analysis/blob/master/notebooks/pixiedust_facebook_analysis.ipynb
+* Enter this Notebook URL:
+```
+ https://github.com/IBM/pixiedust-facebook-analysis/blob/master/notebooks/pixiedust_facebook_analysis.ipynb
+```
 * Click the `Create Notebook` button.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
-## 4. Add the CSV file
+## 3. Create Bluemix services
+
+Create the following Bluemix services by clicking the `Deploy to Bluemix` button, or use these links to create the services in the Bluemix UI.
+
+  * [**Visual Recognition**](https://console.ng.bluemix.net/catalog/services/visual-recognition)
+  * [**Natural Language Understanding**](https://console.ng.bluemix.net/catalog/services/natural-language-understanding)
+  * [**Tone Analyzer**](https://console.ng.bluemix.net/catalog/services/tone-analyzer)
+  
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/pixiedust-facebook-analysis)
+
+## 4. Add credentials
+
+Find the notebook cell after `1.5. Add Service Credentials From Bluemix for Watson Services`.
+
+Replace the five <add_...> placeholder values with information from the `Service Credentials` tab in Bluemix. Use your Bluemix dashboard to find each of the services and click on the `Service Credentials` tab. In some cases, you might need to create credentials with the `New Credential` option.
+
+![](doc/source/images/add_credentials.png)
+
+> Note: This cell is marked as a `hidden_cell` because it will contain sensitive credentials.
+
+## 5. Add the CSV file
 
 #### Add the CSV file to the notebook
 Use `Find and Add Data` (look for the `10/01` icon)
@@ -118,14 +130,11 @@ this git repo. Look in the `data/example_input` directory.
 
 ![](doc/source/images/add_file.png)
 
-#### Create an empty cell
-Use the `+` button above to create an empty cell to hold
-the inserted code and credentials. You can put this cell
-at the top or anywhere before `3. Prepare Data`.
-
 #### Insert to code
-After you add the file, use its `Insert to code` drop-down menu.
-Make sure your active cell is the empty one created earlier.
+Find the notebook cell after `2.1 Load data from Object Storage`. Place your cursor after `# Insert pandas DataFrame`. Make sure this cell is selected before inserting code.
+
+Using the file that you added above (under the 10/01 Files tab),
+use the `Insert to code` drop-down menu.
 Select `Insert Pandas DataFrame` from the drop-down menu.
 
 ![](doc/source/images/insert_to_code.png)
