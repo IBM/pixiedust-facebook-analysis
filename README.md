@@ -125,10 +125,10 @@ Use `Find and Add Data` (look for the `10/01` icon)
 and its `Files` tab. From there you can click
 `browse` and add a .csv file from your computer.
 
+![](doc/source/images/add_file.png)
+
 > Note:  If you don't have your own data, you can get our example by cloning
 this git repo. Look in the `data/example_input` directory.
-
-![](doc/source/images/add_file.png)
 
 #### Insert to code
 Find the notebook cell after `2.1 Load data from Object Storage`. Place your cursor after `# Insert pandas DataFrame`. Make sure this cell is selected before inserting code.
