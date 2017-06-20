@@ -22,10 +22,10 @@ When the reader has completed this journey, they will understand how to:
 
  * Read external data in to a DSX Jupyter notebook via DSX Object Storage and pandas DataFrames
  * Use a Jupyter notebook and Watson APIs to enrich data unstructured data using:
-     * Visual Recognition
-     * Natural Language Understanding
-     * Tone Analyzer
- * Use PixieDust to explore data and visualize insights
+     * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html)
+     * [Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html)
+     * [Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
+ * Use [PixieDust](https://github.com/ibm-cds-labs/pixiedust) to explore data and visualize insights
 
 ![](doc/source/images/architecture.png)
 
@@ -113,7 +113,7 @@ Use `Find and Add Data` (look for the `10/01` icon)
 and its `Files` tab. From there you can click
 `browse` and add a .csv file from your computer.
 
-> Note:  If you don't have your own replays, you can get our example by cloning
+> Note:  If you don't have your own data, you can get our example by cloning
 this git repo. Look in the `data/example_input` directory.
 
 ![](doc/source/images/add_file.png)
@@ -130,10 +130,10 @@ Select `Insert Pandas DataFrame` from the drop-down menu.
 
 ![](doc/source/images/insert_to_code.png)
 
-Note: This cell is marked as a hidden_cell because it contains
+> Note: This cell is marked as a hidden_cell because it contains
 sensitive credentials.
 
-![](doc/source/images/inserted_stringio.png)
+![](doc/source/images/inserted_pandas.png)
 
 #### Fix-up variable names
 The inserted code includes a generated method with credentials and then calls
@@ -141,8 +141,8 @@ the generated method to set a variable with a name like `data_1`. If you do
 additional inserts, the method can be re-used and the variable will change
 (e.g. `data_2`).
 
-Later in the notebook, we set `data = data_1`. So you might need to
-fix the variable name `data_1` to match your inserted code.
+Later in the notebook, we set `df = df_data_1`. So you might need to
+fix the variable name `df_data_1` to match your inserted code.
 
 ## 5. Add credentials
 
@@ -151,14 +151,10 @@ Use the `+` button above to create an empty cell to hold
 the inserted code and credentials. You can put this cell
 at the top or anywhere before `2. Load Data`.
 
-#### Add the Cloudant credentials to the notebook
-Use `Find and Add Data` (look for the `10/01` icon)
-and its `Connections` tab. You should see the
-connection name created earlier.
-Make sure your active cell is the empty one created earlier.
-Select `Insert to code` (below your connection name).
+#### Insert the file credentials
+Use the CSV file's drop-down menu again. This time select `Insert Credentials`.
 
-![](doc/source/images/insert_cloudant_conn.png)
+![](doc/source/images/insert_file_credentials.png)
 
 Note: This cell is marked as a `hidden_cell` because it contains sensitive credentials.
 
