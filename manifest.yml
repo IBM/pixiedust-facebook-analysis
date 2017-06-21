@@ -1,0 +1,20 @@
+declared-services:
+  pfa-visual-recognition:
+    label: visual-recognition
+    plan: free
+  pfa-natural-language-understanding:
+    label: natural-language-understanding
+    plan: free
+  pfa-tone-analyzer:
+    label: tone_analyzer
+    plan: free
+applications:
+- services:
+   - pfa-visual-recognition
+   - pfa-natural-language-understanding
+   - pfa-tone-analyzer
+  memory: 128M
+  no-route: true
+  name: pixiedust-facebook-analysis
+  health-check-type: none
+  buildpack: noop-buildpack
