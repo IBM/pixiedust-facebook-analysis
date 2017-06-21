@@ -85,17 +85,18 @@ Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By sig
 
 ## 2. Create the notebook
 
-Use the menu on the left to select `My Projects` and then `Default Project`.
-Click on `Add notebooks` (upper right) to create a notebook.
+You can create the notebook in DSX using the URL of the notebook that is in this git repo (or similarly from a local file if you cloned the repo).
 
-* Select the `From URL` tab.
-* Enter a name for the notebook.
-* Optionally, enter a description for the notebook.
-* Enter this Notebook URL:
-```
- https://github.com/IBM/pixiedust-facebook-analysis/blob/master/notebooks/pixiedust_facebook_analysis.ipynb
-```
-* Click the `Create Notebook` button.
+1. Use the menu on the left to select `My Projects` and then `Default Project`.
+1. Click on `Add notebooks` (upper right) to create a notebook.
+1. Select the `From URL` tab.
+1. Enter a name for the notebook.
+1. Optionally, enter a description for the notebook.
+1. Enter this Notebook URL:
+    ```
+    https://github.com/IBM/pixiedust-facebook-analysis/blob/master/notebooks/pixiedust_facebook_analysis.ipynb
+    ```
+1. Click the `Create Notebook` button.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
