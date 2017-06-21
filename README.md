@@ -25,6 +25,7 @@ When the reader has completed this journey, they will understand how to:
      * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html)
      * [Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html)
      * [Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
+ * Write data from a pandas DataFrame in a DSX Jupyter notebook out to a file in DSX Object Storage.
  * Visualize and explore the enriched data with [PixieDust](https://github.com/ibm-cds-labs/pixiedust).
 
 ![](doc/source/images/architecture.png)
@@ -153,14 +154,13 @@ additional inserts, the method can be re-used and the variable will change
 Later in the notebook, we set `df = df_data_1`. So you might need to
 fix the variable name `df_data_1` to match your inserted code.
 
-## 5. Add credentials
+#### Add file credentials
 
-#### Create an empty cell
-Use the `+` button above to create an empty cell to hold
-the inserted code and credentials. You can put this cell
-at the top or anywhere before `2. Load Data`.
+We want to write the enriched file to the same container that we used above. So now we'll use the same file drop-down to insert credentials. We'll use them later when we write out the enriched CSV file.
 
-#### Insert the file credentials
+After the `df` setup, there is a cell to enter the file credentials.
+Place your cursor after the `#insert credentials for file - Change to credentials_1` line. Make sure this cell is selected before inserting credentials.
+
 Use the CSV file's drop-down menu again. This time select `Insert Credentials`.
 
 ![](doc/source/images/insert_file_credentials.png)
