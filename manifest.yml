@@ -1,6 +1,6 @@
 declared-services:
   pfa-visual-recognition:
-    label: visual-recognition
+    label: watson_vision_combined
     plan: free
   pfa-natural-language-understanding:
     label: natural-language-understanding
