@@ -7,7 +7,7 @@ declared-services:
     plan: free
   pfa-tone-analyzer:
     label: tone_analyzer
-    plan: Lite
+    plan: lite
 applications:
 - services:
    - pfa-visual-recognition
