@@ -77,7 +77,7 @@ described in detail below.
 1. [Add the CSV file](#5-add-the-csv-file)
 1. [Run the notebook](#6-run-the-notebook)
 1. [Analyze the results](#7-analyze-the-results)
-1. [Save and share](#8-save-and-share)
+1. [Save your work](#8-save-your-work)
 
 ## 1. Sign up for the Data Science Experience
 
@@ -148,12 +148,12 @@ sensitive credentials.
 
 #### Fix-up variable names
 The inserted code includes a generated method with credentials and then calls
-the generated method to set a variable with a name like `data_1`. If you do
+the generated method to set a variable with a name like `df_data_1`. If you do
 additional inserts, the method can be re-used and the variable will change
-(e.g. `data_2`).
+(e.g. `df_data_2`).
 
 Later in the notebook, we set `df = df_data_1`. So you might need to
-fix the variable name `df_data_1` to match your inserted code.
+fix the variable name `df_data_1` to match your inserted code or vice versa.
 
 #### Add file credentials
 
@@ -201,25 +201,60 @@ There are several ways to execute the code cells in your notebook:
 
 ## 7. Analyze the results
 
-The result of running the notebook is a report which may be shared with or
-without sharing the code. You can share the code for an audience that wants
-to see how you came your conclusions. The text, code and output/charts are
-combined in a single web page. For an audience that does not want to see the
-code, you can share a web page that only shows text and output/charts.
+### Part I - Enrich
 
-### Data preparation
+If you walk through the cells, you will see that we demonstrated how to do the following in Part I:
 
-If you look through the code, you'll see that a lot of work went into preparing the data. 
+* Install external libraries from PyPI
+* Create clients to connect to Watson cognitive services
+* Load data from a local CSV file to a pandas DataFrame (via Object Storage)
+* Do some data manipulation with pandas
+* Use BeautifulSoup
+* Use Visual Recognition
+* Use Tone Analyzer
+* Use Natural Language Understanding
+* Save the enriched data in a CSV file in Object Storage
 
-### Visualization
+### Part II - Data Preparation
 
-Visualization with PixieDust...
+In Part II, we used pandas to create multiple DataFrames from our main enriched DataFrame. After slicing and dicing and cleaning, these new DataFrames are ready for PixieDust to use.
 
-### Stored documents
+### Part III - Analyze
 
-The enriched .CSV file was saved in DSX Object Storage.
+In Part III, we analyze the results by exploring and visualizing the metrics with PixieDust.
 
-## 8. Save and share
+After all the prep work done earlier, you'll see that there is almost no code
+needed here (thanks to PixieDust). We just use one-liners like this:
+```python
+display(<data-frame>)
+```
+
+You should also notice that we used ```display(tones)``` in two different
+cells, but the result was two different charts. How can that happen?
+Well, we used cell metadata to tell PixieDust how to display the data.
+Notice the `Edit Metadata` button on each cell. If you don't see it, use the menu
+`View > Cell Toolbar > Edit Metadata` to make it visible. If you look at
+the metadata for the first two charts, you'll see how we got a bar chart and a pie chart.
+
+**PixieDust is interactive!** This is where we explore to find out what
+the enriched data will tell us.
+
+Use the `Options` button to change the chart settings. The first chart shows
+post consumption by the detected emotion in the article. Notice how changing
+the aggregation type from SUM to AVG gives you a very different conclusion.
+You can also change it to COUNT to see the frequency of each emotion, but when you do that the metric no longer matters.
+
+Explore by trying the following:
+* Use social tone as the key instead of emotion tone (or both).
+* Try other metrics such as lifetime negative feedback from users. 
+* Try the different renderers.
+* Try different chart types (and a grid).
+
+The right combination will give you insights into the impact of
+your facebook posts. Once you uncover the insights, find the best
+presentation to convince others.
+
+## 8. Save your work
 
 ### How to save your work:
 
@@ -231,20 +266,6 @@ Under the `File` menu, there are several ways to save your notebook:
   that contains a date and time stamp. Up to 10 versions of your notebook can be
   saved, each one retrievable by selecting the `Revert To Version` menu item.
 
-### How to share your work:
-
-You can share your notebook by selecting the “Share” button located in the top
-right section of your notebook panel. The end result of this action will be a URL
-link that will display a “read-only” version of your notebook. You have several
-options to specify exactly what you want shared from your notebook:
-
-* `Only text and output` will remove all code cells from the notebook view.
-* `All content excluding sensitive code cells`  will remove any code cells
-  that contain a *sensitive* tag. For example, `# @hidden_cell` is used to protect
-  your Bluemix credentials from being shared.
-* `All content, including code` displays the notebook as is.
-* A variety of `download as` options are also available in the menu.
-
 # Sample output
 
 The sample_output.html in data/examples has embedded JavaScript for
@@ -252,6 +273,8 @@ PixieDust charts. Use rawgit.com to view it with the following
 link:
 
 [Sample Output](https://rawgit.com/IBM/pixiedust-facebook-analysis/sample_output/data/examples/pixiedust_facebook_analysis.html)
+
+> Note: Some interactive functionality does not work in the HTML sample. Run the notebook for full functionality. To see the code and markdown cells without output, you can view [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb) with the github viewer.
 
 # License
 
