@@ -2,7 +2,7 @@
 
 In this developer journey, we will use a Jupyter notebook to glean insights from a vast body of unstructured data.
 
-We'll start with data exported from Facebook Analytics. We'll enrich the data with Watson’s Natural Language Understanding (NLU) and Tone Analyzer.
+We'll start with data exported from Facebook Analytics. We'll enrich the data with Watson’s Natural Language Understanding (NLU), Tone Analyzer and Visual Recognition.
 
 We'll use the enriched data to answer questions like:
 
@@ -16,7 +16,7 @@ It is important to note that this journey is meant to be used as a guided experi
 
 After data is enriched with Watson APIs, there are several different types of ways to analyze it. The Data Science Experience (DSX) provides a robust, yet flexible method of exploring the unstructured, enriched Facebook content.
 
-This journey provides mock Facebook data, a notebook, and comes with 3 pre-built visualizations to jump start you with uncovering hidden insights.
+This journey provides mock Facebook data, a notebook, and comes with several pre-built visualizations to jump start you with uncovering hidden insights.
 
 When the reader has completed this journey, they will understand how to:
 
