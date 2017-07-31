@@ -22,9 +22,9 @@ When the reader has completed this journey, they will understand how to:
 
  * Read external data in to a DSX Jupyter notebook via DSX Object Storage and pandas DataFrames.
  * Use a Jupyter notebook and Watson APIs to enrich data unstructured data using:
-     * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html)
      * [Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html)
      * [Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
+     * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html)
  * Write data from a pandas DataFrame in a DSX Jupyter notebook out to a file in DSX Object Storage.
  * Visualize and explore the enriched data with [PixieDust](https://github.com/ibm-cds-labs/pixiedust).
 
@@ -33,8 +33,8 @@ When the reader has completed this journey, they will understand how to:
 ## Flow
 1. A CSV file exported from Facebook Analytics is added to DSX Object Storage.
 2. Generated code makes the file accessible as a pandas DataFrame.
-3. The data is enriched with Tone Analyzer.
-4. The data is enriched with Natural Language Understanding.
+3. The data is enriched with Natural Language Understanding.
+4. The data is enriched with Tone Analyzer.
 5. The data is enriched with Visual Recognition.
 6. The enriched data can be explored with PixieDust to uncover hidden insights and create graphics to highlight them.
 
@@ -46,8 +46,8 @@ Want to take your Watson app to the next level? Looking to leverage Watson Brand
 
 * [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 * [Bluemix Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): A Bluemix service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
-* [Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html): Uses linguistic analysis to detect communication tones in written text.
 * [Watson Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html): Natural language processing for advanced text analysis.
+* [Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html): Uses linguistic analysis to detect communication tones in written text.
 * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html): Understand image content.
 
 # Featured technologies
@@ -210,9 +210,9 @@ If you walk through the cells, you will see that we demonstrated how to do the f
 * Load data from a local CSV file to a pandas DataFrame (via Object Storage)
 * Do some data manipulation with pandas
 * Use BeautifulSoup
-* Use Visual Recognition
-* Use Tone Analyzer
 * Use Natural Language Understanding
+* Use Tone Analyzer
+* Use Visual Recognition
 * Save the enriched data in a CSV file in Object Storage
 
 ### Part II - Data Preparation
@@ -272,6 +272,15 @@ The example output in data/examples has embedded JavaScript for
 PixieDust charts. View it via github pages: [here](https://ibm.github.io/pixiedust-facebook-analysis/data/examples/pixiedust_facebook_analysis.html)
 
 > Note: Some interactive functionality does not work in the HTML sample. Run the notebook for full functionality. To see the code and markdown cells without output, you can view [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb) with the github viewer.
+
+# Links
+
+For more information about PixieDust, check out the following:
+* PixieDust Documentation: https://ibm-cds-labs.github.io/pixiedust/index.html
+* PixieDust GitHub Repo: https://github.com/ibm-cds-labs/pixiedust
+
+Visit the Watson Accelerators portal to see more live patterns in action:
+* Watson Accelerators: http://www.watsonaccelerators.com
 
 # License
 
