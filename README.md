@@ -1,6 +1,6 @@
 # Uncover insights from Facebook with PixieDust and a cognitive Jupyter notebook
 
-In this developer journey, we will use a Jupyter notebook to glean insights from a vast body of unstructured data.
+In this developer journey, we will use a Jupyter notebook to glean insights from a vast body of unstructured data. Credit goes to [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) and [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) for providing the initial notebook design.
 
 We'll start with data exported from Facebook Analytics. We'll enrich the data with Watson’s Natural Language Understanding (NLU), Tone Analyzer and Visual Recognition.
 
