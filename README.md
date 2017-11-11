@@ -1,6 +1,6 @@
 # Uncover insights from Facebook with PixieDust and a cognitive Jupyter notebook
 
-In this developer journey, we will use a Jupyter notebook to glean insights from a vast body of unstructured data. Credit goes to [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) and [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) for providing the initial notebook design.
+In this Code Pattern, we will use a Jupyter notebook to glean insights from a vast body of unstructured data. Credit goes to [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) and [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) for providing the initial notebook design.
 
 We'll start with data exported from Facebook Analytics. We'll enrich the data with Watson’s Natural Language Understanding (NLU), Tone Analyzer and Visual Recognition.
 
@@ -12,13 +12,13 @@ We'll use the enriched data to answer questions like:
 
 These types of insights are especially beneficial for marketing analysts who are interested in understanding and improving brand perception, product performance, customer satisfaction, and ways to engage their audiences.
 
-It is important to note that this journey is meant to be used as a guided experiment, rather than an application with one set output. The standard Facebook Analytics export features text from posts, articles, and thumbnails, along with standard Facebook performance metrics such as likes, shares, and impressions. This unstructured content was then enriched with Watson APIs to extract keywords, entities, sentiment, and tone.
+It is important to note that this Code Pattern is meant to be used as a guided experiment, rather than an application with one set output. The standard Facebook Analytics export features text from posts, articles, and thumbnails, along with standard Facebook performance metrics such as likes, shares, and impressions. This unstructured content was then enriched with Watson APIs to extract keywords, entities, sentiment, and tone.
 
 After data is enriched with Watson APIs, there are several different types of ways to analyze it. The Data Science Experience (DSX) provides a robust, yet flexible method of exploring the unstructured, enriched Facebook content.
 
-This journey provides mock Facebook data, a notebook, and comes with several pre-built visualizations to jump start you with uncovering hidden insights.
+This Code Pattern provides mock Facebook data, a notebook, and comes with several pre-built visualizations to jump start you with uncovering hidden insights.
 
-When the reader has completed this journey, they will understand how to:
+When the reader has completed this Code Pattern, they will understand how to:
 
  * Read external data in to a DSX Jupyter notebook via DSX Object Storage and pandas DataFrames.
  * Use a Jupyter notebook and Watson APIs to enrich data unstructured data using:
@@ -38,14 +38,10 @@ When the reader has completed this journey, they will understand how to:
 5. The data is enriched with Visual Recognition.
 6. The enriched data can be explored with PixieDust to uncover hidden insights and create graphics to highlight them.
 
-## With Watson
-
-Want to take your Watson app to the next level? Looking to leverage Watson Brand assets? Join the [With Watson](https://www.ibm.com/watson/with-watson) program which provides exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
-
 # Included components
 
 * [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
-* [Bluemix Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): A Bluemix service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
+* [IBM Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 * [Watson Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html): Natural language processing for advanced text analysis.
 * [Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html): Uses linguistic analysis to detect communication tones in written text.
 * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html): Understand image content.
@@ -67,12 +63,12 @@ Want to take your Watson app to the next level? Looking to leverage Watson Brand
 
 # Steps
 
-Follow these steps to setup and run this developer journey. The steps are
+Follow these steps to setup and run this Code Pattern. The steps are
 described in detail below.
 
 1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
 1. [Create the notebook](#2-create-the-notebook)
-1. [Create Bluemix services](#3-create-bluemix-services)
+1. [Create IBM Cloud services](#3-create-ibm-cloud-services)
 1. [Add credentials](#4-add-credentials)
 1. [Add the CSV file](#5-add-the-csv-file)
 1. [Run the notebook](#6-run-the-notebook)
@@ -81,7 +77,7 @@ described in detail below.
 
 ## 1. Sign up for the Data Science Experience
 
-Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your Bluemix account.
+Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your IBM Cloud account.
 
 ## 2. Create the notebook
 
@@ -100,21 +96,21 @@ You can create the notebook in DSX using the URL of the notebook that is in this
 
 ![](doc/source/images/create_notebook_from_url.png)
 
-## 3. Create Bluemix services
+## 3. Create IBM Cloud services
 
-Create the following Bluemix services by clicking the `Deploy to Bluemix` button, or use these links to create the services in the Bluemix UI.
+Create the following IBM Cloud services by clicking the `Deploy to Bluemix` button, or use these links to create the services in the IBM Cloud UI.
 
   * [**Visual Recognition**](https://console.ng.bluemix.net/catalog/services/visual-recognition)
   * [**Natural Language Understanding**](https://console.ng.bluemix.net/catalog/services/natural-language-understanding)
   * [**Tone Analyzer**](https://console.ng.bluemix.net/catalog/services/tone-analyzer)
   
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/pixiedust-facebook-analysis)
+[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/pixiedust-facebook-analysis)
 
 ## 4. Add credentials
 
-Find the notebook cell after `1.5. Add Service Credentials From Bluemix for Watson Services`.
+Find the notebook cell after `1.5. Add Service Credentials From IBM Cloud for Watson Services`.
 
-Replace the five <add_...> placeholder values with information from the `Service Credentials` tab in Bluemix. Use your Bluemix dashboard to find each of the services and click on the `Service Credentials` tab. In some cases, you might need to create credentials with the `New Credential` option.
+Replace the five <add_...> placeholder values with information from the `Service Credentials` tab in IBM Cloud. Use your IBM Cloud dashboard to find each of the services and click on the `Service Credentials` tab. In some cases, you might need to create credentials with the `New Credential` option.
 
 ![](doc/source/images/add_credentials.png)
 
@@ -275,12 +271,21 @@ PixieDust charts. View it via github pages: [here](https://ibm.github.io/pixiedu
 
 # Links
 
-For more information about PixieDust, check out the following:
-* PixieDust Documentation: https://ibm-cds-labs.github.io/pixiedust/index.html
-* PixieDust GitHub Repo: https://github.com/ibm-cds-labs/pixiedust
+* [Demo on Youtube](https://www.youtube.com/watch?v=UIkjFo9o3vI)
+* [PixieDust Documentation](https://ibm-cds-labs.github.io/pixiedust/index.html)
+* [PixieDust GitHub Repo](https://github.com/ibm-cds-labs/pixiedust)
+* [Watson Accelerators](http://www.watsonaccelerators.com)
+* [Cognitive discovery architecture](https://www.ibm.com/devops/method/content/architecture/cognitiveDiscoveryDomain2)
+* [Facebook Analytics Developer Docs](https://developers.facebook.com/docs/analytics)
+* [A Robot Befriends Classic Monsters Using Watson APIs](https://medium.com/ibm-developer-advocacy/a-robot-befriends-classic-monsters-using-watson-apis-part-1-76b1cc64957e)
 
-Visit the Watson Accelerators portal to see more live patterns in action:
-* Watson Accelerators: http://www.watsonaccelerators.com
+# Learn more
+
+* **Artificial Intelligence Code Patterns**: Enjoyed this Code Pattern? Check out our other [AI Code Patterns](https://developer.ibm.com/code/technologies/artificial-intelligence/).
+* **Data Analytics Code Patterns**: Enjoyed this Code Pattern? Check out our other [Data Analytics Code Patterns](https://developer.ibm.com/code/technologies/data-science/)
+* **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
+* **With Watson**: Want to take your Watson app to the next level? Looking to utilize Watson Brand assets? [Join the With Watson program](https://www.ibm.com/watson/with-watson/) to leverage exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
+* **Data Science Experience**: Master the art of data science with IBM's [Data Science Experience](https://datascience.ibm.com/)
 
 # License
 
