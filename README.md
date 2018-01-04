@@ -98,7 +98,7 @@ You can create the notebook in DSX using the URL of the notebook that is in this
 
 ## 3. Create IBM Cloud services
 
-Create the following IBM Cloud services by clicking the `Deploy to Bluemix` button, or use these links to create the services in the IBM Cloud UI.
+Create the following IBM Cloud services by clicking the `Deploy to IBM Cloud` button, or use these links to create the services in the IBM Cloud UI.
 
   * [**Visual Recognition**](https://console.ng.bluemix.net/catalog/services/visual-recognition)
   * [**Natural Language Understanding**](https://console.ng.bluemix.net/catalog/services/natural-language-understanding)
