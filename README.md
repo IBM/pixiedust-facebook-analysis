@@ -272,7 +272,7 @@ PixieDust charts. View it via github pages: [here](https://ibm.github.io/pixiedu
 # Links
 
 * [Demo on Youtube](https://www.youtube.com/watch?v=UIkjFo9o3vI)
-* [PixieDust Documentation](https://ibm-cds-labs.github.io/pixiedust/index.html)
+* [PixieDust Documentation](https://ibm-watson-data-lab.github.io/pixiedust/use.html)
 * [PixieDust GitHub Repo](https://github.com/ibm-cds-labs/pixiedust)
 * [Watson Accelerators](http://www.watsonaccelerators.com)
 * [Cognitive discovery architecture](https://www.ibm.com/devops/method/content/architecture/cognitiveDiscoveryDomain2)
