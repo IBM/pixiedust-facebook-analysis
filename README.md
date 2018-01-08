@@ -21,7 +21,7 @@ This Code Pattern provides mock Facebook data, a notebook, and comes with severa
 When the reader has completed this Code Pattern, they will understand how to:
 
  * Read external data in to a DSX Jupyter notebook via DSX Object Storage and pandas DataFrames.
- * Use a Jupyter notebook and Watson APIs to enrich data unstructured data using:
+ * Use a Jupyter notebook and Watson APIs to enrich unstructured data using:
      * [Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html)
      * [Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
      * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html)
@@ -125,7 +125,7 @@ and its `Files` tab. From there you can click
 
 ![](doc/source/images/add_file.png)
 
-> Note:  If you don't have your own data, you can get our example by cloning
+> Note:  If you don't have your own data, you can use our example by cloning
 this git repo. Look in the `data/example_input` directory.
 
 #### Insert to code
