@@ -103,7 +103,7 @@ Create the following IBM Cloud services by clicking the `Deploy to IBM Cloud` bu
   * [**Visual Recognition**](https://console.ng.bluemix.net/catalog/services/visual-recognition)
   * [**Natural Language Understanding**](https://console.ng.bluemix.net/catalog/services/natural-language-understanding)
   * [**Tone Analyzer**](https://console.ng.bluemix.net/catalog/services/tone-analyzer)
-  
+
 [![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/pixiedust-facebook-analysis)
 
 ## 4. Add credentials
@@ -242,7 +242,7 @@ You can also change it to COUNT to see the frequency of each emotion, but when y
 
 Explore by trying the following:
 * Use social tone as the key instead of emotion tone (or both).
-* Try other metrics such as lifetime negative feedback from users. 
+* Try other metrics such as lifetime negative feedback from users.
 * Try the different renderers.
 * Try different chart types (and a grid).
 
