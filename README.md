@@ -265,9 +265,9 @@ Under the `File` menu, there are several ways to save your notebook:
 # Sample output
 
 The example output in data/examples has embedded JavaScript for
-PixieDust charts. View it via github pages: [here](https://ibm.github.io/pixiedust-facebook-analysis/data/examples/pixiedust_facebook_analysis.html)
+PixieDust charts. View it via nbviewer: [here](http://nbviewer.jupyter.org/github/IBM/pixiedust-facebook-analysis/blob/31087e15cbad3a23d7e0e8e0a57a4f43fb2d45d6/data/examples/pixiedust_facebook_analysis.ipynb)
 
-> Note: Some interactive functionality does not work in the HTML sample. Run the notebook for full functionality. To see the code and markdown cells without output, you can view [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb) with the github viewer.
+> Note: Some interactive functionality might not work in the saved example. Run the notebook for full functionality. To see the code and markdown cells without output, you can view [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb) with the github viewer.
 
 # Links
 
