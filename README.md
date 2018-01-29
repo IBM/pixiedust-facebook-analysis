@@ -110,7 +110,7 @@ Create the following IBM Cloud services by clicking the `Deploy to IBM Cloud` bu
 
 Find the notebook cell after `1.5. Add Service Credentials From IBM Cloud for Watson Services`.
 
-Replace the five <add_...> placeholder values with information from the `Service Credentials` tab in IBM Cloud. Use your IBM Cloud dashboard to find each of the services and click on the `Service Credentials` tab. In some cases, you might need to create credentials with the `New Credential` option.
+Replace the five `<add_...>` placeholder values with information from the `Service Credentials` tab in IBM Cloud. Use your IBM Cloud dashboard to find each of the services and click on the `Service Credentials` tab. In some cases, you might need to create credentials with the `New Credential` option.
 
 ![](doc/source/images/add_credentials.png)
 
@@ -121,7 +121,7 @@ Replace the five <add_...> placeholder values with information from the `Service
 #### Add the CSV file to the notebook
 Use `Find and Add Data` (look for the `10/01` icon)
 and its `Files` tab. From there you can click
-`browse` and add a .csv file from your computer.
+`browse` and add a `.csv` file from your computer.
 
 ![](doc/source/images/add_file.png)
 
@@ -131,13 +131,13 @@ this git repo. Look in the `data/example_input` directory.
 #### Insert to code
 Find the notebook cell after `2.1 Load data from Object Storage`. Place your cursor after `# Insert pandas DataFrame`. Make sure this cell is selected before inserting code.
 
-Using the file that you added above (under the 10/01 Files tab),
+Using the file that you added above (under the `10/01` Files tab),
 use the `Insert to code` drop-down menu.
 Select `Insert Pandas DataFrame` from the drop-down menu.
 
 ![](doc/source/images/insert_to_code.png)
 
-> Note: This cell is marked as a hidden_cell because it contains
+> Note: This cell is marked as a `hidden_cell` because it contains
 sensitive credentials.
 
 ![](doc/source/images/inserted_pandas.png)
@@ -264,10 +264,10 @@ Under the `File` menu, there are several ways to save your notebook:
 
 # Sample output
 
-The example output in data/examples has embedded JavaScript for
+The example output in `data/examples` has embedded JavaScript for
 PixieDust charts. View it via nbviewer: [here](http://nbviewer.jupyter.org/github/IBM/pixiedust-facebook-analysis/blob/31087e15cbad3a23d7e0e8e0a57a4f43fb2d45d6/data/examples/pixiedust_facebook_analysis.ipynb)
 
-> Note: Some interactive functionality might not work in the saved example. Run the notebook for full functionality. To see the code and markdown cells without output, you can view [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb) with the github viewer.
+> Note: Some interactive functionality might not work in the saved example. Run the notebook for full functionality. To see the code and markdown cells without output, you can view [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb) with the Github viewer.
 
 # Links
 
