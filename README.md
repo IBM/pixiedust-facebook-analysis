@@ -142,6 +142,11 @@ sensitive credentials.
 
 ![](doc/source/images/inserted_pandas.png)
 
+> Note: There is an [issue](https://github.com/IBM/pixiedust-facebook-analysis/issues/39) that causes failure of non utf-8 encodings that requires a workaround. You would fix this in the cell above by adding an encoding parameter to read_csv(). For our `example_facebook_data.csv`:
+```
+df_data_1 = pd.read_csv(body, encoding='latin-1')
+```
+
 #### Fix-up variable names
 The inserted code includes a generated method with credentials and then calls
 the generated method to set a variable with a name like `df_data_1`. If you do
