@@ -83,7 +83,7 @@ Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a p
 
 > Note: When creating your Object Storage service, select the ``Free`` storage type in order to avoid having to pay an upgrade fee.
 
-### 2. Create the notebook
+## 2. Create the notebook
 
 * In [Watson Studio](https://dataplatform.ibm.com), click on `Create notebook` to create a notebook.
 * Create a project if necessary, provisioning an object storage service if required.
