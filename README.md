@@ -1,5 +1,7 @@
 # Uncover insights from Facebook with PixieDust and a cognitive Jupyter notebook
 
+> Data Science Experience is now Watson Studio. Although some images in this code pattern may show the service as Data Science Experience, the steps and processes will still work.
+
 In this Code Pattern, we will use a Jupyter notebook to glean insights from a vast body of unstructured data. Credit goes to [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) and [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) for providing the initial notebook design.
 
 We'll start with data exported from Facebook Analytics. We'll enrich the data with Watson’s Natural Language Understanding (NLU), Tone Analyzer and Visual Recognition.
@@ -14,7 +16,7 @@ These types of insights are especially beneficial for marketing analysts who are
 
 It is important to note that this Code Pattern is meant to be used as a guided experiment, rather than an application with one set output. The standard Facebook Analytics export features text from posts, articles, and thumbnails, along with standard Facebook performance metrics such as likes, shares, and impressions. This unstructured content was then enriched with Watson APIs to extract keywords, entities, sentiment, and tone.
 
-After data is enriched with Watson APIs, there are several different types of ways to analyze it. The Watson Studio provides a robust, yet flexible method of exploring the unstructured, enriched Facebook content.
+After data is enriched with Watson APIs, there are several different types of ways to analyze it. Watson Studio provides a robust, yet flexible method of exploring the unstructured, enriched Facebook content.
 
 This Code Pattern provides mock Facebook data, a notebook, and comes with several pre-built visualizations to jump start you with uncovering hidden insights.
 
@@ -66,7 +68,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 Follow these steps to setup and run this Code Pattern. The steps are
 described in detail below.
 
-1. [Sign up for the Watson Studio](#1-sign-up-for-the-data-science-experience)
+1. [Sign up for Watson Studio](#1-sign-up-for-watson-studio)
 1. [Create the notebook](#2-create-the-notebook)
 1. [Create IBM Cloud services](#3-create-ibm-cloud-services)
 1. [Add credentials](#4-add-credentials)
@@ -75,24 +77,23 @@ described in detail below.
 1. [Analyze the results](#7-analyze-the-results)
 1. [Save your work](#8-save-your-work)
 
-## 1. Sign up for the Watson Studio
+## 1. Sign up for Watson Studio
 
-Sign up for IBM's [Watson Studio](http://datascience.ibm.com/). By signing up for the Watson Studio, two services: ``Apache Spark`` and ``Object Storage`` will be created in your IBM Cloud account.
+Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Take note of your service names as you will need to select them in the following steps.
 
-## 2. Create the notebook
+> Note: When creating your Object Storage service, select the ``Free`` storage type in order to avoid having to pay an upgrade fee.
 
-You can create the notebook in Watson Studio using the URL of the notebook that is in this git repo (or similarly from a local file if you cloned the repo).
+### 2. Create the notebook
 
-1. Use the menu on the left to select `My Projects` and then `Default Project`.
-1. Click on `Add notebooks` (upper right) to create a notebook.
-1. Select the `From URL` tab.
-1. Enter a name for the notebook.
-1. Optionally, enter a description for the notebook.
-1. Enter this Notebook URL:
-    ```
-    https://github.com/IBM/pixiedust-facebook-analysis/blob/master/notebooks/pixiedust_facebook_analysis.ipynb
-    ```
-1. Click the `Create Notebook` button.
+* In [Watson Studio](https://dataplatform.ibm.com), click on `Create notebook` to create a notebook.
+* Create a project if necessary, provisioning an object storage service if required.
+* In the `Assets` tab, select the `Create notebook` option.
+* Select the `From URL` tab.
+* Enter a name for the notebook.
+* Optionally, enter a description for the notebook.
+* Enter this Notebook URL: https://github.com/IBM/pixiedust-facebook-analysis/blob/master/notebooks/pixiedust_facebook_analysis.ipynb
+* Select the free Anaconda runtime.
+* Click the `Create` button.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
@@ -290,7 +291,7 @@ PixieDust charts. View it via nbviewer: [here](http://nbviewer.jupyter.org/githu
 * **Data Analytics Code Patterns**: Enjoyed this Code Pattern? Check out our other [Data Analytics Code Patterns](https://developer.ibm.com/code/technologies/data-science/)
 * **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
 * **With Watson**: Want to take your Watson app to the next level? Looking to utilize Watson Brand assets? [Join the With Watson program](https://www.ibm.com/watson/with-watson/) to leverage exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
-* **Watson Studio**: Master the art of data science with IBM's [Watson Studio](https://datascience.ibm.com/)
+* **Watson Studio**: Master the art of data science with IBM's [Watson Studio](https://dataplatform.ibm.com/)
 
 # License
 
