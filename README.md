@@ -14,24 +14,24 @@ These types of insights are especially beneficial for marketing analysts who are
 
 It is important to note that this Code Pattern is meant to be used as a guided experiment, rather than an application with one set output. The standard Facebook Analytics export features text from posts, articles, and thumbnails, along with standard Facebook performance metrics such as likes, shares, and impressions. This unstructured content was then enriched with Watson APIs to extract keywords, entities, sentiment, and tone.
 
-After data is enriched with Watson APIs, there are several different types of ways to analyze it. The Data Science Experience (DSX) provides a robust, yet flexible method of exploring the unstructured, enriched Facebook content.
+After data is enriched with Watson APIs, there are several different types of ways to analyze it. The Watson Studio provides a robust, yet flexible method of exploring the unstructured, enriched Facebook content.
 
 This Code Pattern provides mock Facebook data, a notebook, and comes with several pre-built visualizations to jump start you with uncovering hidden insights.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
- * Read external data in to a DSX Jupyter notebook via DSX Object Storage and pandas DataFrames.
+ * Read external data in to a Watson Studio Jupyter notebook via Watson Studio Object Storage and pandas DataFrames.
  * Use a Jupyter notebook and Watson APIs to enrich unstructured data using:
      * [Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html)
      * [Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
      * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html)
- * Write data from a pandas DataFrame in a DSX Jupyter notebook out to a file in DSX Object Storage.
+ * Write data from a pandas DataFrame in a Watson Studio Jupyter notebook out to a file in Watson Studio Object Storage.
  * Visualize and explore the enriched data with [PixieDust](https://github.com/ibm-cds-labs/pixiedust).
 
 ![](doc/source/images/architecture.png)
 
 ## Flow
-1. A CSV file exported from Facebook Analytics is added to DSX Object Storage.
+1. A CSV file exported from Facebook Analytics is added to Watson Studio Object Storage.
 2. Generated code makes the file accessible as a pandas DataFrame.
 3. The data is enriched with Natural Language Understanding.
 4. The data is enriched with Tone Analyzer.
@@ -40,7 +40,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 # Included components
 
-* [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
+* [IBM Watson Studio](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 * [IBM Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 * [Watson Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html): Natural language processing for advanced text analysis.
 * [Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html): Uses linguistic analysis to detect communication tones in written text.
@@ -66,7 +66,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 Follow these steps to setup and run this Code Pattern. The steps are
 described in detail below.
 
-1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
+1. [Sign up for the Watson Studio](#1-sign-up-for-the-data-science-experience)
 1. [Create the notebook](#2-create-the-notebook)
 1. [Create IBM Cloud services](#3-create-ibm-cloud-services)
 1. [Add credentials](#4-add-credentials)
@@ -75,13 +75,13 @@ described in detail below.
 1. [Analyze the results](#7-analyze-the-results)
 1. [Save your work](#8-save-your-work)
 
-## 1. Sign up for the Data Science Experience
+## 1. Sign up for the Watson Studio
 
-Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your IBM Cloud account.
+Sign up for IBM's [Watson Studio](http://datascience.ibm.com/). By signing up for the Watson Studio, two services: ``Watson Studio-Spark`` and ``Watson Studio-ObjectStore`` will be created in your IBM Cloud account.
 
 ## 2. Create the notebook
 
-You can create the notebook in DSX using the URL of the notebook that is in this git repo (or similarly from a local file if you cloned the repo).
+You can create the notebook in Watson Studio using the URL of the notebook that is in this git repo (or similarly from a local file if you cloned the repo).
 
 1. Use the menu on the left to select `My Projects` and then `Default Project`.
 1. Click on `Add notebooks` (upper right) to create a notebook.
@@ -290,7 +290,7 @@ PixieDust charts. View it via nbviewer: [here](http://nbviewer.jupyter.org/githu
 * **Data Analytics Code Patterns**: Enjoyed this Code Pattern? Check out our other [Data Analytics Code Patterns](https://developer.ibm.com/code/technologies/data-science/)
 * **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
 * **With Watson**: Want to take your Watson app to the next level? Looking to utilize Watson Brand assets? [Join the With Watson program](https://www.ibm.com/watson/with-watson/) to leverage exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
-* **Data Science Experience**: Master the art of data science with IBM's [Data Science Experience](https://datascience.ibm.com/)
+* **Watson Studio**: Master the art of data science with IBM's [Watson Studio](https://datascience.ibm.com/)
 
 # License
 
