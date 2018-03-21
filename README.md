@@ -20,18 +20,18 @@ This Code Pattern provides mock Facebook data, a notebook, and comes with severa
 
 When the reader has completed this Code Pattern, they will understand how to:
 
- * Read external data in to a Watson Studio Jupyter notebook via Watson Studio Object Storage and pandas DataFrames.
+ * Read external data in to a Jupyter Notebook via Object Storage and pandas DataFrames.
  * Use a Jupyter notebook and Watson APIs to enrich unstructured data using:
      * [Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html)
      * [Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
      * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html)
- * Write data from a pandas DataFrame in a Watson Studio Jupyter notebook out to a file in Watson Studio Object Storage.
+ * Write data from a pandas DataFrame in a Jupyter Notebook out to a file in Object Storage.
  * Visualize and explore the enriched data with [PixieDust](https://github.com/ibm-cds-labs/pixiedust).
 
 ![](doc/source/images/architecture.png)
 
 ## Flow
-1. A CSV file exported from Facebook Analytics is added to Watson Studio Object Storage.
+1. A CSV file exported from Facebook Analytics is added to Object Storage.
 2. Generated code makes the file accessible as a pandas DataFrame.
 3. The data is enriched with Natural Language Understanding.
 4. The data is enriched with Tone Analyzer.
