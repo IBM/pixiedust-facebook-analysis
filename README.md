@@ -69,8 +69,8 @@ Follow these steps to setup and run this Code Pattern. The steps are
 described in detail below.
 
 1. [Sign up for Watson Studio](#1-sign-up-for-watson-studio)
-1. [Create the notebook](#2-create-the-notebook)
-1. [Create IBM Cloud services](#3-create-ibm-cloud-services)
+1. [Create a project and add services](#2-create-a-project-and-add-services)
+1. [Create the notebook in Watson Studio](#3-create-the-notebook-in-watson-studio)
 1. [Add credentials](#4-add-credentials)
 1. [Add the CSV file](#5-add-the-csv-file)
 1. [Run the notebook](#6-run-the-notebook)
@@ -83,35 +83,32 @@ Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a p
 
 > Note: When creating your Object Storage service, select the ``Free`` storage type in order to avoid having to pay an upgrade fee.
 
-## 2. Create the notebook
+## 2. Create a project and add services
 
-* In [Watson Studio](https://dataplatform.ibm.com), click on `Create notebook` to create a notebook.
-* Create a project if necessary, provisioning an object storage service if required.
-* In the `Assets` tab, select the `Create notebook` option.
+* In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services. Choose the `Data Science` project tile.
+* Associate the project with Watson services. To create an instance of each service, go to the `Settings` tab in the new project and scroll down to `Associated Services`. Click `+` and select `Watson` from the drop-down menu. Add the service using the free tier. Repeat for each of the services used in this pattern:
+  * Visual Recognition
+  * Natural Language Understanding
+  * Tone Analyzer
+* Once your services are created, copy the credentials and save them for later. You will use them in your Jupyter notebook.
+
+## 3. Create the notebook in Watson Studio
+
+* In the `Assets` tab of the new project, select `Notebooks` -> `+ New notebook` OR select `+ Add to project` -> `Notebook`.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Enter this Notebook URL: https://github.com/IBM/pixiedust-facebook-analysis/blob/master/notebooks/pixiedust_facebook_analysis.ipynb
+* Under `Notebook URL` provide the following URL: https://raw.githubusercontent.com/IBM/pixiedust-facebook-analysis/master/notebooks/pixiedust_facebook_analysis.ipynb
 * Select the free Anaconda runtime.
 * Click the `Create` button.
 
-![](doc/source/images/create_notebook_from_url.png)
-
-## 3. Create IBM Cloud services
-
-Create the following IBM Cloud services by clicking the `Deploy to IBM Cloud` button, or use these links to create the services in the IBM Cloud UI.
-
-  * [**Visual Recognition**](https://console.ng.bluemix.net/catalog/services/visual-recognition)
-  * [**Natural Language Understanding**](https://console.ng.bluemix.net/catalog/services/natural-language-understanding)
-  * [**Tone Analyzer**](https://console.ng.bluemix.net/catalog/services/tone-analyzer)
-
-[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/pixiedust-facebook-analysis)
+![create notebook](https://github.com/IBM/pattern-utils/blob/master/watson-studio/notebook_with_url_py35.png) 
 
 ## 4. Add credentials
 
 Find the notebook cell after `1.5. Add Service Credentials From IBM Cloud for Watson Services`.
 
-Replace the five `<add_...>` placeholder values with information from the `Service Credentials` tab in IBM Cloud. Use your IBM Cloud dashboard to find each of the services and click on the `Service Credentials` tab. In some cases, you might need to create credentials with the `New Credential` option.
+Replace the five `<add_...>` placeholder values with information from the `Service Credentials` tab for each service.
 
 ![](doc/source/images/add_credentials.png)
 
