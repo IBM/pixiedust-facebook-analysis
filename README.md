@@ -110,7 +110,7 @@ Find the notebook cell after `1.5. Add Service Credentials From IBM Cloud for Wa
 
 Replace the five `<add_...>` placeholder values with information from the `Service Credentials` tab for each service.
 
-![](doc/source/images/add_credentials.png)
+![](doc/source/images/add_credentials.jpg)
 
 > Note: This cell is marked as a `hidden_cell` because it will contain sensitive credentials.
 
