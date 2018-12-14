@@ -2,7 +2,7 @@
 
 > Data Science Experience is now Watson Studio. Although some images in this code pattern may show the service as Data Science Experience, the steps and processes will still work.
 
-In this Code Pattern, we will use a Jupyter notebook to glean insights from a vast body of unstructured data. Credit goes to [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) and [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) for providing the initial notebook design.
+In this code pattern, we will use a Jupyter notebook to glean insights from a vast body of unstructured data. Credit goes to [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) and [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) for providing the initial notebook design.
 
 We'll start with data exported from Facebook Analytics. We'll enrich the data with Watson’s Natural Language Understanding (NLU), Tone Analyzer and Visual Recognition.
 
@@ -14,21 +14,21 @@ We'll use the enriched data to answer questions like:
 
 These types of insights are especially beneficial for marketing analysts who are interested in understanding and improving brand perception, product performance, customer satisfaction, and ways to engage their audiences.
 
-It is important to note that this Code Pattern is meant to be used as a guided experiment, rather than an application with one set output. The standard Facebook Analytics export features text from posts, articles, and thumbnails, along with standard Facebook performance metrics such as likes, shares, and impressions. This unstructured content was then enriched with Watson APIs to extract keywords, entities, sentiment, and tone.
+It is important to note that this code pattern is meant to be used as a guided experiment, rather than an application with one set output. The standard Facebook Analytics export features text from posts, articles, and thumbnails, along with standard Facebook performance metrics such as likes, shares, and impressions. This unstructured content was then enriched with Watson APIs to extract keywords, entities, sentiment, and tone.
 
 After data is enriched with Watson APIs, there are several different types of ways to analyze it. Watson Studio provides a robust, yet flexible method of exploring the unstructured, enriched Facebook content.
 
-This Code Pattern provides mock Facebook data, a notebook, and comes with several pre-built visualizations to jump start you with uncovering hidden insights.
+This code pattern provides mock Facebook data, a notebook, and comes with several pre-built visualizations to jump start you with uncovering hidden insights.
 
-When the reader has completed this Code Pattern, they will understand how to:
+When the reader has completed this code pattern, they will understand how to:
 
 * Read external data in to a Jupyter Notebook via Object Storage and pandas DataFrames.
 * Use a Jupyter notebook and Watson APIs to enrich unstructured data using:
-  * [Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html)
-  * [Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
-  * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html)
+  * [Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understanding/)
+  * [Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/)
+  * [Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/)
 * Write data from a pandas DataFrame in a Jupyter Notebook out to a file in Object Storage.
-* Visualize and explore the enriched data with [PixieDust](https://github.com/ibm-cds-labs/pixiedust).
+* Visualize and explore the enriched data with [PixieDust](https://github.com/pixiedust/pixiedust).
 
 ![architecture](doc/source/images/architecture.png)
 
@@ -44,19 +44,19 @@ When the reader has completed this Code Pattern, they will understand how to:
 ## Included components
 
 * [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
-* [IBM Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
-* [Watson Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html): Natural language processing for advanced text analysis.
-* [Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html): Uses linguistic analysis to detect communication tones in written text.
-* [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html): Understand image content.
+* [IBM Cloud Object Storage](https://console.bluemix.net/catalog/services/cloud-object-storage): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
+* [Watson Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understanding/): Natural language processing for advanced text analysis.
+* [Watson Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/): Uses linguistic analysis to detect communication tones in written text.
+* [Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/): Understand image content.
 
 ## Featured technologies
 
 * [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
-* [PixieDust](https://github.com/ibm-cds-labs/pixiedust): PixieDust is an open source helper library that works as an add-on to Jupyter notebooks to improve the user experience of working with data.
+* [PixieDust](https://github.com/pixiedust/pixiedust): PixieDust is an open source helper library that works as an add-on to Jupyter notebooks to improve the user experience of working with data.
 * [pandas](http://pandas.pydata.org/): A Python library providing high-performance, easy-to-use data structures.
 * [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/): Beautiful Soup is a Python library for pulling data out of HTML and XML files.
 * [Data Science](https://developer.ibm.com/code/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
-* [Cognitive](https://developer.ibm.com/watson/): Watson is a cognitive technology that can think like a human.
+* [Artificial Intelligence](https://developer.ibm.com/technologies/artificial-intelligence/): Watson is a cognitive technology that can think like a human.
 * [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
 * [Python](https://www.python.org/): Python is a programming language that lets you work more quickly and integrate your systems more effectively.
 
@@ -66,7 +66,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## Steps
 
-Follow these steps to setup and run this Code Pattern. The steps are
+Follow these steps to setup and run this code pattern. The steps are
 described in detail below.
 
 1. [Sign up for Watson Studio](#1-sign-up-for-watson-studio)
@@ -80,30 +80,35 @@ described in detail below.
 
 ### 1. Sign up for Watson Studio
 
-Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Take note of your service names as you will need to select them in the following steps.
+* Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Take note of your service names as you will need to select them in the following steps.
 
-> Note: When creating your Object Storage service, select the ``Free`` storage type in order to avoid having to pay an upgrade fee.
+  > Note: When creating your Object Storage service, select the ``Free`` storage type in order to avoid having to pay an upgrade fee.
 
 ### 2. Create a project and add services
 
 * In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services. Choose the `Data Science` project tile.
-* Associate the project with Watson services. To create an instance of each service, go to the `Settings` tab in the new project and scroll down to `Associated Services`. Click `+` and select `Watson` from the drop-down menu. Add the service using the free tier. Repeat for each of the services used in this pattern:
+  ![create_project](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/CreateDataScienceProject.png)
+* Associate the project with Watson services. To create an instance of each service, go to the `Settings` tab in the new project and scroll down to `Associated Services`. Click `Add service` and select `Watson` from the drop-down menu. Add the service using the free tier. Repeat for each of the services used in this pattern:
   * Visual Recognition
   * Natural Language Understanding
   * Tone Analyzer
+
 * Once your services are created, copy the credentials and save them for later. You will use them in your Jupyter notebook.
+  * Use the upper-left `☰` menu, and select `Services > Watson Services`.
+  * Use the 3-dot actions menu to select `Manage in IBM Cloud` for each service.
+  * Copy each `API Key` and `URL` to use in the notebook.
 
 ### 3. Create the notebook in Watson Studio
 
-* In the `Assets` tab of the new project, select `Notebooks` -> `+ New notebook` OR select `+ Add to project` -> `Notebook`.
+* In [Watson Studio](https://dataplatform.ibm.com), click on `+ Add to project` and then click the `Notebook` tile.
+  ![add_notebook](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/StudioAddToProjectNotebook.png)
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Under `Notebook URL` provide the following URL: `https://raw.githubusercontent.com/IBM/pixiedust-facebook-analysis/master/notebooks/pixiedust_facebook_analysis.ipynb`
-* Select the free Anaconda runtime.
-* Click the `Create` button.
-
-![create notebook](https://github.com/IBM/pattern-utils/blob/master/watson-studio/notebook_with_url_py35.png)
+* Enter this Notebook URL:  
+  `https://raw.githubusercontent.com/IBM/pixiedust-facebook-analysis/master/notebooks/pixiedust_facebook_analysis.ipynb`
+* For runtime choose `Default Python 3.5 Free (1 vCPU and 4 GB RAM)`.
+* Click the `Create Notebook` button.
 
 ### 4. Add credentials
 
@@ -111,7 +116,7 @@ Find the notebook cell after `1.5. Add Service Credentials From IBM Cloud for Wa
 
 Replace the five `<add_...>` placeholder values with information from the `Service Credentials` tab for each service.
 
-![add_credentials](doc/source/images/add_credentials.jpg)
+![add_credentials](doc/source/images/add_credentials.png)
 
 > Note: This cell is marked as a `hidden_cell` because it will contain sensitive credentials.
 
