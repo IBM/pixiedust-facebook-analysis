@@ -1,5 +1,7 @@
 # Uncover insights from Facebook with PixieDust and a cognitive Jupyter notebook
 
+*Read this in other languages: [한국어](README-ko.md).*
+
 > Data Science Experience is now Watson Studio. Although some images in this code pattern may show the service as Data Science Experience, the steps and processes will still work.
 
 In this code pattern, we will use a Jupyter notebook to glean insights from a vast body of unstructured data. Credit goes to [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) and [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) for providing the initial notebook design.
