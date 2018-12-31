@@ -2,9 +2,10 @@
 
 *다른 언어로 보기: [English](README.md).*
 
-> Data Science Experience is now Watson Studio. Although some images in this code pattern may show the service as Data Science Experience, the steps and processes will still work.
+> 기존 아티클에서 사용했던 Data science Experience 플랫폼이 Watson Studio로 변경되었습니다. 
+몇몇 이미지들이 Data Science Experience 버전이지만, 코드 패턴은 정상적으로 구동 가능합니다.
 
-이 코드 패턴에서는, Jupyter notebook을 이용해서 많은 비체계 데이터로부터 인사이트를 도출합니다. 초기 노트북 설계 Credit은 [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) 와 [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) 에게 있습니다.
+이 코드 패턴에서는, Jupyter notebook을 이용해서 많은 비정형 데이터로부터 인사이트를 도출합니다. 초기 노트북 설계 Credit은 [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) 와 [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) 에게 있습니다.
 
 Facebook Analytics 에서 추출한 데이터를 바탕으로, Watson Natural Language Understanding (NLU) 서비스와 Tone Analyzer 및 Visual Recognition 을 적용합니다.
 
@@ -16,16 +17,16 @@ Facebook Analytics 에서 추출한 데이터를 바탕으로, Watson Natural La
 
 이러한 인사이트는 마케팅 애널리틱스가 브랜드 인지도, 제품 퍼포먼스, 고객 만족도, 타겟 오디언스의 참여 유도 등을 이해하고 개선하는데 큰 도움이 됩니다.
 
-이 코드 패턴은 하나의 세팅된 어플리케이션이 아닌 참고용 가이드로 이해하는 것이 좋습니다. Facebook Analytics export 기능으로 포스팅의 텍스트, 아티클, 썸네일, 그리고 페이스북의 기본적인 퍼포먼스 매트릭스(좋아요, 공유, 도달율 등) 을 추출할 수 있습니다.  이러한 비체계적인 정보에 Watson APIs 를 접목하여 키워드, entities, 감정, 분위기 등을 분석할 수 있습니다. 
+이 코드 패턴은 하나의 세팅된 어플리케이션이 아닌 참고용 가이드로 이해하는 것이 좋습니다. Facebook Analytics export 기능으로 포스팅의 텍스트, 아티클, 썸네일, 그리고 페이스북의 기본적인 퍼포먼스 매트릭스(좋아요, 공유, 도달율 등) 을 추출할 수 있습니다.이러한 비정형 데이터에 Watson APIs 를 접목하여 키워드, entities, 감정, 분위기 등을 분석할 수 있습니다. 
 
 데이터에 Watson APIs 를 접목한 후, 여러가지 방법으로 분석할 수 있습니다. Watson Studio 는 강력하지만 유연한 페이스북 콘텐츠 탐색 방법을 제공합니다.
 
-이 코드 패턴은 당신이 숨겨진 인사이트를 찾는 것을 바로 시도해볼 수 있도록 페이스북 데이터, Jupyter notebook , 시각화 샘플을 제공합니다.
+이 코드 패턴은 당신이 숨겨진 인사이트를 찾는 것을 바로 시도해볼 수 있도록 페이스북 데이터, Jupyter notebook, 시각화 샘플을 제공합니다.
 
 이 코드 패턴을 이해하면 다음과 같은 내용을 이해할 수 있습니다:
 
 * Object Storage 와 pandas 데이터 프레임을 통해 Jupyter Notebook으로 외부 데이터 읽어 오기
-* 다음을 활용하여 Jupyter notebook, Watson APIs 로 비체계 데이터 가공하기:
+* 다음을 활용하여 Jupyter notebook, Watson APIs 로 비정형 데이터 가공하기:
   * [Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understanding/)
   * [Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/)
   * [Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/)
@@ -36,7 +37,7 @@ Facebook Analytics 에서 추출한 데이터를 바탕으로, Watson Natural La
 
 ## 플로우
 
-1. Facebook Analytics 에서 추출한 CSV file 을 Object Storage 에 추가
+1. Facebook Analytics 에서 추출한 CSV 파일을 Object Storage 에 추가
 2. 코드를 활용하여 pandas DataFrame 형태로 파일 액세스
 3. 데이터에 Natural Language Understanding 기술 접목
 4. 데이터에 Tone Analyzer 기술 접목
@@ -46,7 +47,7 @@ Facebook Analytics 에서 추출한 데이터를 바탕으로, Watson Natural La
 ## 포함된 구성 요소
 
 * [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio): Spark와 같은 IBM 추가 기능을 포함한 설정된 협엽 환경에서 RStudio, Jupyter, and Python 을 활용하여 데이터 분석
-* [IBM Cloud Object Storage](https://console.bluemix.net/catalog/services/cloud-object-storage): 비체계 클라우드 데이터 저장 기능을 제공하는 IBM Cloud 서비스를 활용하여, 비용대비 효율이 높고 신뢰할 수 있는 앱 또는 서비스를 구축 및 빠른 속도로 시장 진입
+* [IBM Cloud Object Storage](https://console.bluemix.net/catalog/services/cloud-object-storage): 비정형 데이터 클라우드 저장 기능을 제공하는 IBM Cloud 서비스를 활용하여, 비용 대비 효율이 높고 신뢰할 수 있는 앱 또는 서비스를 구축 및 빠른 속도로 시장 진입
 * [Watson Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understanding/): 고도화된 텍스트 분석을 위한 자연어 처리
 * [Watson Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/): 언어 분석을 통해 텍스트 내 대화 분위기를 탐지
 * [Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/): 이미지 콘텐츠 인식
@@ -57,7 +58,7 @@ Facebook Analytics 에서 추출한 데이터를 바탕으로, Watson Natural La
 * [PixieDust](https://github.com/pixiedust/pixiedust): 오픈 소스 헬퍼 라이브러리로 데이터 처리 사용자 경험을 향상시키는 Jupyter notebooks 의 추가 기능입니다.
 * [pandas](http://pandas.pydata.org/): 파이썬 라이브러리로, 고성능의 사용하기 쉬운 데이터 구조를 제공합니다.
 * [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/): 파이썬 라이브러리로, HTML and XML 파일에서 데이터를 읽어옵니다.
-* [Data Science](https://developer.ibm.com/code/technologies/data-science/): 시스템이자 과학적 방법으로, 체계적 또는 비체계적 데이터를 분석하고 지식이나 인사이트를 도출해 냅니다. 
+* [Data Science](https://developer.ibm.com/code/technologies/data-science/): 시스템이자 과학적 방법으로, 정형 또는 비정형 데이터를 분석하고 지식이나 인사이트를 도출해 냅니다. 
 * [Artificial Intelligence](https://developer.ibm.com/technologies/artificial-intelligence/): Watson 은 사람처럼 생각할 수 있는 인지 기술입니다. 
 * [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
 * [Python](https://www.python.org/): 당신의 시스템을 더욱 효과적으로 통합하고 빠르게 작업할 수 있는 프로그래밍 언어입니다. 
@@ -82,7 +83,7 @@ Facebook Analytics 에서 추출한 데이터를 바탕으로, Watson Natural La
 
 ### 1. Watson Studio 가입
 
-* [Watson Studio](https://dataplatform.ibm.com)에 가입하세요. Watson Studio 에서 프로젝트를 생성하면, IBM Cloud 계정에 무료 요금 플랜의 ``Object Storage`` 서비스가 생성됩니다. 이어지는 단계에서 올바르게 선택하기 위해 당신이 만들고자 하는 서비스의 이름을 기억하세요.
+* IBM [Watson Studio](https://dataplatform.ibm.com) 에 가입하세요. Watson Studio 에서 프로젝트를 생성하면, IBM Cloud 계정에 무료 플랜의 ``Object Storage`` 서비스가 생성됩니다. 이어지는 단계에서 올바르게 선택하기 위해 당신이 만들고자 하는 서비스의 이름을 기억하세요.
 
   > 주의: Object Storage 서비스 생성 시 업그레이드 요금을 지불하지 않으려면 'Free storage type' 을 선택하세요. 
 
@@ -258,7 +259,7 @@ display(<data-frame>)
 * 감정 대신 분위기를 key로 사용하기
 * 다른 유저들로부터 부정적인 피드백과 같은 다른 매트릭스 채택하기 
 * 다른 renderer 시도하기
-* T다른 그리드 혹은 그래프 타입 사용하기
+* 다른 그리드 혹은 그래프 타입 사용하기
 
 적절한 콤비네이션으로 당신의 페이스북 포스팅에 대한 인사이트를 얻어보세요. 
 인사이트를 발견해내고, 다른 사람들을 설득할 수 있는 최고의 프레젠테이션 방법을 찾아보세요. 
