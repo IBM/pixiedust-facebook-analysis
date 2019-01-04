@@ -27,6 +27,7 @@ Facebook Analytics 에서 추출한 데이터를 바탕으로, Watson Natural La
 
 * Object Storage 와 pandas 데이터 프레임을 통해 Jupyter Notebook으로 외부 데이터 읽어 오기
 * 다음을 활용하여 Jupyter notebook, Watson APIs 로 비정형 데이터 가공하기:
+
   * [Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understanding/)
   * [Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/)
   * [Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/)
@@ -36,6 +37,7 @@ Facebook Analytics 에서 추출한 데이터를 바탕으로, Watson Natural La
 ![architecture](doc/source/images/architecture.png)
 
 ## 플로우
+
 
 1. Facebook Analytics 에서 추출한 CSV 파일을 Object Storage 에 추가
 2. 코드를 활용하여 pandas DataFrame 형태로 파일 액세스
