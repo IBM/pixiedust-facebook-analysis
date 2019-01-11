@@ -51,18 +51,18 @@ When the reader has completed this code pattern, they will understand how to:
 
 ## Featured technologies
 
-* [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
+* [Jupyter Notebooks](https://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
 * [PixieDust](https://github.com/pixiedust/pixiedust): PixieDust is an open source helper library that works as an add-on to Jupyter notebooks to improve the user experience of working with data.
-* [pandas](http://pandas.pydata.org/): A Python library providing high-performance, easy-to-use data structures.
+* [pandas](https://pandas.pydata.org/): A Python library providing high-performance, easy-to-use data structures.
 * [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/): Beautiful Soup is a Python library for pulling data out of HTML and XML files.
-* [Data Science](https://developer.ibm.com/code/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
+* [Data Science](https://developer.ibm.com/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
 * [Artificial Intelligence](https://developer.ibm.com/technologies/artificial-intelligence/): Watson is a cognitive technology that can think like a human.
-* [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
+* [Analytics](https://developer.ibm.com/technologies/analytics/): Analytics delivers the value of data for the enterprise.
 * [Python](https://www.python.org/): Python is a programming language that lets you work more quickly and integrate your systems more effectively.
 
 ## Watch the Video
 
-[![video](http://img.youtube.com/vi/UIkjFo9o3vI/0.jpg)](https://www.youtube.com/watch?v=UIkjFo9o3vI)
+[![video](https://img.youtube.com/vi/UIkjFo9o3vI/0.jpg)](https://www.youtube.com/watch?v=UIkjFo9o3vI)
 
 ## Steps
 
@@ -80,7 +80,7 @@ described in detail below.
 
 ### 1. Sign up for Watson Studio
 
-* Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Take note of your service names as you will need to select them in the following steps.
+* Sign up for IBM's [Watson Studio](https://dataplatform.cloud.ibm.com/). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Take note of your service names as you will need to select them in the following steps.
 
   > Note: When creating your Object Storage service, select the ``Free`` storage type in order to avoid having to pay an upgrade fee.
 
@@ -100,7 +100,7 @@ described in detail below.
 
 ### 3. Create the notebook in Watson Studio
 
-* In [Watson Studio](https://dataplatform.ibm.com), click on `+ Add to project` and then click the `Notebook` tile.
+* In [Watson Studio](https://dataplatform.cloud.ibm.com/), click on `+ Add to project` and then click the `Notebook` tile.
   ![add_notebook](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/StudioAddToProjectNotebook.png)
 * Select the `From URL` tab.
 * Enter a name for the notebook.
@@ -281,7 +281,7 @@ Under the `File` menu, there are several ways to save your notebook:
 ## Sample output
 
 The example output in `data/examples` has embedded JavaScript for
-PixieDust charts. View it via nbviewer: [here](http://nbviewer.jupyter.org/github/IBM/pixiedust-facebook-analysis/blob/master/data/examples/pixiedust_facebook_analysis.ipynb)
+PixieDust charts. View it via nbviewer: [here](https://nbviewer.jupyter.org/github/IBM/pixiedust-facebook-analysis/blob/master/data/examples/pixiedust_facebook_analysis.ipynb)
 
 > Note: Some interactive functionality might not work in the saved example. Run the notebook for full functionality. To see the code and markdown cells without output, you can view [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb) with the Github viewer.
 
@@ -290,7 +290,7 @@ PixieDust charts. View it via nbviewer: [here](http://nbviewer.jupyter.org/githu
 * [Demo on Youtube](https://www.youtube.com/watch?v=UIkjFo9o3vI)
 * [PixieDust Documentation](https://pixiedust.github.io/pixiedust/)
 * [PixieDust GitHub Repo](https://github.com/pixiedust/pixiedust)
-* [Watson Accelerators](http://www.watsonaccelerators.com)
+* [Watson Accelerators](https://watsonaccelerators.mybluemix.net/portal/welcome)
 * [Cognitive discovery architecture](https://www.ibm.com/cloud/garage/architectures/cognitiveDiscoveryDomain)
 * [Facebook Analytics Developer Docs](https://developers.facebook.com/docs/analytics)
 * [A Robot Befriends Classic Monsters Using Watson APIs](https://medium.com/ibm-watson/a-robot-befriends-classic-monsters-using-watson-apis-part-1-76b1cc64957e)
@@ -301,7 +301,7 @@ PixieDust charts. View it via nbviewer: [here](http://nbviewer.jupyter.org/githu
 * **Data Analytics Code Patterns**: Enjoyed this Code Pattern? Check out our other [Data Science Code Patterns](https://developer.ibm.com/technologies/data-science/)
 * **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
 * **With Watson**: Want to take your Watson app to the next level? Looking to utilize Watson Brand assets? [Join the With Watson program](https://www.ibm.com/watson/with-watson/) to leverage exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
-* **Watson Studio**: Master the art of data science with IBM's [Watson Studio](https://dataplatform.ibm.com/)
+* **Watson Studio**: Master the art of data science with IBM's [Watson Studio](https://dataplatform.cloud.ibm.com/)
 
 ## License
 
