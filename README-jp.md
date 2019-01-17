@@ -43,11 +43,11 @@ Watson API でエンリッチされたデータを分析するには、さまざ
 
 ## 使用しているコンポーネント
 
-* [IBM Watson Studio](https://www.ibm.com/watson/jp-ja/developercloud/watson-studio.html): マネージされたSparkなどIBMの価値あるツールを含む統合されたコラボレーティブな環境でRStudio, Jupyter, Python 等でデータ分析が可能です。
+* [IBM Watson Studio](https://www.ibm.com/watson/jp-ja/developercloud/watson-studio.html): マネージされたSparkなどIBMの価値あるツールを含む統合されたコラボレーティブな環境でRStudio, Jupyter, Python 等でデータ分析が可能です。
 
 * [IBM Cloud Object Storage](https://www.ibm.com/cloud-computing/jp-ja/products/storage/object-storage/): IBM Cloud サービス は高い信頼性と迅速な市場投入で費用対効果の高いアプリケーションとサービスを構築し提供する非構造化クラウドデータストアを提供しています。
 
-* [Watson Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understanding/): 高度なテキスト分析のための自然言語処理
+* [Watson Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understanding/): 高度なテキスト分析のための自然言語処理
 
 * [Watson Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/): テキストから筆者の感情、社交性、文体を解析する
 
@@ -80,13 +80,13 @@ Watson API でエンリッチされたデータを分析するには、さまざ
 
 ## Steps
 
-下記の手順に従って、セットアップとこのコードパターンの実行をしてください。詳細はこの下にあります。
+下記の手順に従って、セットアップとこのコードパターンの実行をしてください。詳細はこの下にあります。
 
 
 1. [Watson Studioにサインアップ](#1.-Watson-Studioにサインアップ)
 1. [プロジェクトとサービスの作成](#2.-プロジェクトとサービスの作成)
-1. [Watson Studioでノートブックの作成](#3.-Watson-Studioでノートブックの作成)
-1. [Credentialの追加](#4.-Credentialの追加)
+1. [Watson Studioでノートブックの作成](#3.-Watson-Studioでノートブックの作成)
+1. [Credentialの追加](#4.-Credentialの追加)
 1. [CSVファイルの追加](#5.-CSVファイルの追加)
 1. [ノートブックの実行](#6.-ノートブックの実行)
 1. [結果の分析](#7.-結果の分析)
@@ -114,9 +114,9 @@ Watson API でエンリッチされたデータを分析するには、さまざ
   * ノートブックで使用するために、それぞれの `API Key`と` URL`をコピーしてください。
 
 
-### 3. Watson Studioでノートブックの作成
+### 3. Watson Studioでノートブックの作成
 
-* [Watson Studio](https://dataplatform.cloud.ibm.com/)で、`+ Add to project`をクリックしてから、`notebook` タイルをクリックします。
+* [Watson Studio](https://dataplatform.cloud.ibm.com/)で、`+ Add to project`をクリックしてから、`notebook` タイルをクリックします。
 
   ![add_notebook](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/StudioAddToProjectNotebook.png)
 
@@ -125,11 +125,11 @@ Watson API でエンリッチされたデータを分析するには、さまざ
 * 必要に応じて、`description` にノートブックの説明を入力してください。
 * `Notebook URL`に以下のURLを入力してください：
  `https://raw.githubusercontent.com/IBM/pixiedust-facebook-analysis/master/notebooks/pixiedust_facebook_analysis.ipynb`
-* `runtime` は`Default Python 3.5 Free (1 vCPU and 4 GB RAM)`を選択してください。
-* 最後に`Create Notebook` ボタンをクリックします。.
+* `runtime` は`Default Python 3.5 Free (1 vCPU and 4 GB RAM)`を選択してください。
+* 最後に`Create Notebook` ボタンをクリックします。.
 
 ### 4. Credentialの追加
-`1.5. Add Service Credentials From IBM Cloud for Watson Services`の後のセルを表示されたノートブックから探します。
+`1.5. Add Service Credentials From IBM Cloud for Watson Services`の後のセルを表示されたノートブックから探します。
 
 各サービスについて、5つの `<add _...>`プレースホルダーの値を `サービス資格情報`タブからの情報に置き換えます。
 
@@ -142,7 +142,7 @@ Watson API でエンリッチされたデータを分析するには、さまざ
 
 #### ノートブックにCSVファイルを追加
 
- `Find and Add Data` (右上の `10/01`アイコンをクリックしてください。) とその中の`Files` タブを使用します。`File` タブの中の`browse`をクリックして、自分のコンピュータから`.csv`ファイルを追加します。
+ `Find and Add Data` (右上の `10/01`アイコンをクリックしてください。) とその中の`Files` タブを使用します。`File` タブの中の`browse`をクリックして、自分のコンピュータから`.csv`ファイルを追加します。
 
 ![add_file](doc/source/images/add_file.png)
 
@@ -154,7 +154,7 @@ Watson API でエンリッチされたデータを分析するには、さまざ
 
 `2.1 Load data from Object Storage`の下のセルを探してください。そして`＃Insert pandas DataFrame`の後にカーソルを置きます。コードを挿入する前にこのセルが選択されていることを確認してください。
 
-先ほど追加したファイルの(`10/01`の`File` タブの下にあります)、’ Insert to code’のドロップダウンメニューを使います。そのドロップダウンメニューから’ Insert Pandas’ を選択してください。
+先ほど追加したファイルの(`10/01`の`File` タブの下にあります)、’ Insert to code’のドロップダウンメニューを使います。そのドロップダウンメニューから’ Insert Pandas’ を選択してください。
 
 ![insert_to_code](doc/source/images/insert_to_code.png)
 
@@ -169,12 +169,12 @@ Watson API でエンリッチされたデータを分析するには、さまざ
 df_data_1 = pd.read_csv(body, encoding='latin-1')
 ```
 
-#### dfの変数名の修正
+#### dfの変数名の修正
 
-挿入されたコードは資格情報と一緒に生成されたメソッドを含み、その後そのメソッドを`df_data_1`のような名前の変数を設定するために呼び出しています。 追加の挿入をすると、メソッドは再利用され、変数は変わります
+挿入されたコードは資格情報と一緒に生成されたメソッドを含み、その後そのメソッドを`df_data_1`のような名前の変数を設定するために呼び出しています。 追加の挿入をすると、メソッドは再利用され、変数は変わります
 （例えば `df_data_2`）。
 
-このノートブックの後ろの方で、 `df = df_data_1`とセットしています。つまり、あなたの挿入されたコードに一致するように、変数名 `df_data_1` またはその逆の`df_data_2`を修正する必要がある場合があります。
+このノートブックの後ろの方で、 `df = df_data_1`とセットしています。つまり、あなたの挿入されたコードに一致するように、変数名 `df_data_1` またはその逆の`df_data_2`を修正する必要がある場合があります。
 
 
 #### ファイル資格情報の追加
@@ -184,13 +184,13 @@ df_data_1 = pd.read_csv(body, encoding='latin-1')
 `df`セットアップの後、ファイルの資格情報を入力するためのセルがあります。
 カーソルを`#insert credentials for file - Change to credentials_1`の下に置きます。認証情報を挿入する前にこのセルが選択されていることを確認してください。
 
-CSVファイルのドロップダウンメニューを再び使います。今回は `Insert Credentials`を使います。
+CSVファイルのドロップダウンメニューを再び使います。今回は `Insert Credentials`を使います。
 
 ![insert_file_credentials](doc/source/images/insert_file_credentials.png)
 
 > 注：このセルは機密の認証情報を含んでいるので `hidden_cell`としてマークされています。
 
-#### 認証情報の変数名の修正
+#### 認証情報の変数名の修正
 
 挿入されたコードは `credentials_1`のような名前の変数に割り当てられた資格情報を持つdictionaryを含みます。それは別の名前を持っているかもしれません（例えば `credentials_2`）。
 名前を変更するか、必要に応じて再割り当てしてください。 このノートブックのコードはそれが `credentials_1`であるとして進めます。
@@ -222,7 +222,7 @@ CSVファイルのドロップダウンメニューを再び使います。今�
 
 ### Part I - エンリッチ
 
-セルをウォークスルーすれば、Part Iで以下をどのようにしているかの実際のコードを確認することができます:
+セルをウォークスルーすれば、Part Iで以下をどのようにしているかの実際のコードを確認することができます:
 
 * PyPIから外部ライブラリをインストールする
 * Watsonコグニティブサービスに接続するためのクライアントを作成する
@@ -251,7 +251,7 @@ display(<data-frame>)
 
 また、2つの異なるセルで `` display（tone） `` を使用していますが、結果は2つの異なるチャートになりました。 なぜでしょう？
 実はセルのメタデータを使用してPixieDustにデータの表示方法を指定することができるのです。
-各セルの `Edit Metadata`ボタンに注目してください。 表示されていない場合は、メニューの`View > Cell Toolbar > Edit Metadata`を使用して表示します。 最初の2つのグラフのメタデータを見ると、棒グラフと円グラフをどのように指定すれば表示できるかがわかります。
+各セルの `Edit Metadata`ボタンに注目してください。 表示されていない場合は、メニューの`View > Cell Toolbar > Edit Metadata`を使用して表示します。 最初の2つのグラフのメタデータを見ると、棒グラフと円グラフをどのように指定すれば表示できるかがわかります。
 
 
 
@@ -280,7 +280,7 @@ display(<data-frame>)
 * `Save Version`はノートブックの現在の状態を日付とタイムスタンプを含むバージョンタグで保存します。 あなたのノートブックの最大10個のバージョンを保存することができ、それぞれのバージョンは `Revert To Version` メニュー項目を選択することによって取得できます。
 
 
-## サンプル出力
+## サンプル出力
 
 `data / examples`にある出力例はPixieDustチャートのためのJavaScriptを埋め込みました。 nbviewerで見る：[こちら](https://nbviewer.jupyter.org/github/IBM/pixiedust-facebook-analysis/blob/master/data/examples/pixiedust_facebook_analysis.ipynb)
 
@@ -294,9 +294,9 @@ display(<data-frame>)
 * [PixieDust ドキュメンテーション](https://pixiedust.github.io/pixiedust/)
 * [PixieDust GitHub Repo](https://github.com/pixiedust/pixiedust)
 * [Watson Accelerators](https://watsonaccelerators.mybluemix.net/portal/welcome)
-* [Cognitive discovery アーキテクチャ](https://www.ibm.com/cloud/garage/architectures/cognitiveDiscoveryDomain)
+* [Cognitive discovery アーキテクチャ](https://www.ibm.com/cloud/garage/architectures/cognitiveDiscoveryDomain)
 * [Facebook Analytics Developer Docs](https://developers.facebook.com/docs/analytics)
-* [Watson APIsを使ったロボットクラシックモンスター](https://medium.com/ibm-watson/a-robot-befriends-classic-monsters-using-watson-apis-part-1-76b1cc64957e)
+* [Watson APIsを使ったロボットクラシックモンスター](https://medium.com/ibm-watson/a-robot-befriends-classic-monsters-using-watson-apis-part-1-76b1cc64957e)
 
 ## Learn more
 
@@ -306,7 +306,7 @@ display(<data-frame>)
 * **With Watson**: Watsonアプリを次のレベルに引き上げたいですか？ Watsonブランドの資産を活用したいですか？ あなたのワトソンを使用した商用ソリューションを増幅し、加速する最高のブランド、マーケティング、および技術リソースを活用する[With Watson プログラムにご参加ください](https://www.ibm.com/watson/with-watson/) 。
 * **Watson Studio**: IBMの [Watson Studio](https://dataplatform.cloud.ibm.com/)でデータサイエンスの芸術をマスターしましょう。
 
-## ライセンス
+## ライセンス
 このコードパターンは、Apache License、Version 2の下でライセンスされています。このコードパターン内で呼び出されるサードパーティコードオブジェクトは、それぞれのプロバイダが独自のライセンスに従ってライセンスしています。コントリビューションは[Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) と [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt)の対象となります。
 
 [Apache License FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
