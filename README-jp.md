@@ -142,7 +142,7 @@ Watson API でエンリッチされたデータを分析するには、さまざ
 
 #### ノートブックにCSVファイルを追加
 
- `Find and Add Data` (右上の `10/01`アイコンをクリックしてください。) とその中の`Files` タブを使用します。`File` タブの中の`browse`をクリックして、自分のコンピュータから`.csv`ファイルを追加します。
+ `Find and Add Data` (右上の `10/01`アイコンをクリックしてください。) とその中の`Files` タブを使用します。`File` タブの中の`browse`をクリックして、自分のコンピュータから`.csv`ファイルを追加します。
 
 ![add_file](doc/source/images/add_file.png)
 
@@ -182,7 +182,7 @@ df_data_1 = pd.read_csv(body, encoding='latin-1')
 エンリッチしたファイルを上記で使用したのと同じコンテナーに書き込みます。 そのため、今度は同じファイルのドロップダウンを使用して資格情報を挿入します。 後でそれらを使用するのは、エンリッチしたCSVファイルを書き出すときです。
 
 `df`セットアップの後、ファイルの資格情報を入力するためのセルがあります。
-カーソルを`#insert credentials for file - Change to credentials_1`の下に置きます。認証情報を挿入する前にこのセルが選択されていることを確認してください。
+カーソルを`#insert credentials for file - Change to credentials_1`の下に置きます。認証情報を挿入する前にこのセルが選択されていることを確認してください。
 
 CSVファイルのドロップダウンメニューを再び使います。今回は `Insert Credentials`を使います。
 
@@ -256,9 +256,9 @@ display(<data-frame>)
 
 
 
-**PixieDustはインタラクティブです！** これが、エンリッチされたデータが私たちに何を伝えてくれるのかを探し出して探求するところです。
+**PixieDustはインタラクティブです！** これが、エンリッチされたデータが私たちに何を伝えてくれるのかを探し出して探求するところです。
 
-チャートの設定を変更するには `Options`ボタンを使います。 最初のグラフは、記事内で検出された感情(emotion)別のリンクがクリックされた数を示しています。 集約タイプをSUMからAVGに変更すると、まったく異なる結論が得られることに注意してください。
+チャートの設定を変更するには `Options`ボタンを使います。 最初のグラフは、記事内で検出された感情(emotion)別のリンクがクリックされた数を示しています。 集約タイプをSUMからAVGに変更すると、まったく異なる結論が得られることに注意してください。
 また、各感情の頻度を確認するためにCOUNTに変更することもできますが、そうした場合、メトリックは重要ではなくなります。
 
 次のことを試してみてください:
@@ -284,7 +284,7 @@ display(<data-frame>)
 
 `data / examples`にある出力例はPixieDustチャートのためのJavaScriptを埋め込みました。 nbviewerで見る：[こちら](https://nbviewer.jupyter.org/github/IBM/pixiedust-facebook-analysis/blob/master/data/examples/pixiedust_facebook_analysis.ipynb)
 
-> 注： 一部のインタラクティブ機能は、保存された例では動作しない場合があります。 全機能を実行するためには、ノートブックを実行します。 出力なしでコードセルとマークダウンセルを見るには、Githubビューアで[notebooks/pixiedust_facebook_analysis.ipynb]（notebooks/pixiedust_facebook_analysis.ipynb）で表示できます。
+> 注： 一部のインタラクティブ機能は、保存された例では動作しない場合があります。 全機能を実行するためには、ノートブックを実行します。 出力なしでコードセルとマークダウンセルを見るには、Githubビューアで[notebooks/pixiedust_facebook_analysis.ipynb]（notebooks/pixiedust_facebook_analysis.ipynb）で表示できます。
 
 
 
