@@ -1,6 +1,6 @@
 # Uncover insights from Facebook with PixieDust and a cognitive Jupyter notebook
 
-*Read this in other languages: [한국어](README-ko.md).*
+*Read this in other languages: [한국어](README-ko.md), [日本語](README-jp.md).*
 
 > Data Science Experience is now Watson Studio. Although some images in this code pattern may show the service as Data Science Experience, the steps and processes will still work.
 
