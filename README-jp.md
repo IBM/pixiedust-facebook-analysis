@@ -1,5 +1,7 @@
 # PixieDustとコグニティブJupyterノートブックでFacebookからの洞察を発見する
 
+*Read this in other languages: [English](README.md), [한국어](README-ko.md)*
+
 > Data Science Experience は　現在は Watson Studio になりました。しかしながら、このコードバターン上のいくつかのイメージ はData Science Experienceのものがあります。修正作業を進めています。
 
 このコードパターンでは、Jupyter ノートブックを使用して大量の非構造化データから洞察を引き出します。
