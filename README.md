@@ -71,23 +71,19 @@ described in detail below.
 
 * Log into IBM's [Watson Studio](https://dataplatform.cloud.ibm.com). Once in, you'll land on the dashboard.
 
-* Create a new project by clicking `+ New project` and choosing `Data Science`:
-
-  ![studio project](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/new-project-data-science.png)
+* Create a new project by clicking `New project +` and then click on `Create an empty project`.
 
 * Enter a name for the project name and click `Create`.
 
-* **NOTE**: By creating a project in Watson Studio a free tier `Object Storage` service and `Watson Machine Learning` service will be created in your IBM Cloud account. Select the `Free` storage type to avoid fees.
+  > **NOTE**: By creating a project in Watson Studio a free tier `Object Storage` service and `Watson Machine Learning` service will be created in your IBM Cloud account. Select the `Free` storage type to avoid fees.
 
-  ![studio-new-project](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/new-project-data-science-name.png)
-
-* Upon a successful project creation, you are taken to a dashboard view of your project. Take note of the `Assets` and `Settings` tabs, we'll be using them to associate our project with any external assets (datasets and notebooks) and any IBM cloud services.
+* Upon a successful project creation, you are taken to the project `Overview` tab. Take note of the `Assets` and `Settings` tabs, we'll be using them to associate our project with any external assets (datasets and notebooks) and any IBM cloud services.
 
   ![studio-project-dashboard](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/overview-empty.png)
 
 ### 2. Add services to the project
 
-* Associate the project with Watson services. To create an instance of each service, go to the `Settings` tab in the new project and scroll down to `Associated Services`. Click `Add service` and select `Watson` from the drop-down menu. Add the service using the free tier. Repeat for each of the services used in this pattern:
+* Associate the project with Watson services. To create an instance of each service, go to the `Settings` tab in the new project and scroll down to `Associated Services`. Click `Add service` and select `Watson` from the drop-down menu. Add the service using the free `Lite` plan. Repeat for each of the services used in this pattern:
 
   * Visual Recognition
   * Natural Language Understanding
@@ -101,7 +97,7 @@ described in detail below.
 
 ### 3. Create the notebook in Watson Studio
 
-* From the new project `Overview` panel, click `+ Add to project` on the top right and choose the `Notebook` asset type.
+* From the new project `Overview` tab, click `+ Add to project` on the top right and choose the `Notebook` asset type.
 
   ![studio-project-dashboard](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/add-assets-notebook.png)
 
@@ -109,14 +105,17 @@ described in detail below.
 
   * Select the `From URL` tab. [1]
   * Enter a `Name` for the notebook and optionally a description. [2]
-  * Under `Notebook URL` provide the following url: [https://raw.githubusercontent.com/IBM/pixiedust-facebook-analysis/master/notebooks/pixiedust_facebook_analysis.ipynb](https://raw.githubusercontent.com/IBM/pixiedust-facebook-analysis/master/notebooks/pixiedust_facebook_analysis.ipynb) [3]
-  * For `Runtime` select the `Python 3.5` option. [4]
+  * For `Select runtime` select the `Default Python 3.6 Free` option. [3]
+  * Under `Notebook URL` provide the following url [4]:
+    ```url
+    https://raw.githubusercontent.com/IBM/pixiedust-facebook-analysis/master/notebooks/pixiedust_facebook_analysis.ipynb
+    ```
 
-  ![add notebook](https://github.com/IBM/pattern-utils/raw/master/watson-studio/notebook-create-url-py35.png)
+  ![new_notebook](doc/source/images/new_notebook.png)
 
-* Click the `Create` button.
+* Click the `Create Notebook` button.
 
-* **TIP:** Once successfully imported, the notebook should appear in the `Notebooks` section of the `Assets` tab.
+  > **TIP:** Your notebook will appear in the `Notebooks` section of the `Assets` tab.
 
 ### 4. Add credentials
 
@@ -140,9 +139,9 @@ Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. From th
 
 #### Insert to code
 
-Find the notebook cell after `2.1 Load data from Object Storage`. Place your cursor after `# Insert pandas DataFrame`. Make sure this cell is selected before inserting code.
+Find the notebook cell after `2.1 Load data from Object Storage`. Place your cursor after `# **Insert to code > Insert pandas DataFrame**`. Make sure this cell is selected before inserting code.
 
-Using the file that you added above (under the `10/01` Files tab), use the `Insert to code` drop-down menu. Select `Insert Pandas DataFrame` from the drop-down menu.
+Using the file that you added above (under the `10/01` Files tab), use the `Insert to code` drop-down menu. Select `Insert pandas DataFrame` from the drop-down menu.
 
 ![insert_to_code](doc/source/images/insert_to_code.png)
 
@@ -167,7 +166,7 @@ Later in the notebook, we set `df = df_data_1`. So you might need to fix the var
 
 We want to write the enriched file to the same container that we used above. So now we'll use the same file drop-down to insert credentials. We'll use them later when we write out the enriched CSV file.
 
-After the `df` setup, there is a cell to enter the file credentials. Place your cursor after the `#insert credentials for file - Change to credentials_1` line. Make sure this cell is selected before inserting credentials.
+After the `df` setup, there is a cell to enter the file credentials. Place your cursor after the `# insert credentials for file - Change to credentials_1` line. Make sure this cell is selected before inserting credentials.
 
 Use the CSV file's drop-down menu again. This time select `Insert Credentials`.
 
