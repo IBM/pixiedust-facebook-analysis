@@ -121,7 +121,7 @@ described in detail below.
 
 Find the notebook cell after `1.5. Add Service Credentials From IBM Cloud for Watson Services`.
 
-Replace the five `<add_...>` placeholder values with information from the `Service Credentials` tab for each service.
+Replace the six placeholder values with information from the `Service Credentials` tab for each service.
 
 ![add_credentials](doc/source/images/add_credentials.png)
 
@@ -149,12 +149,6 @@ Using the file that you added above (under the `10/01` Files tab), use the `Inse
 sensitive credentials.
 
 ![inserted_pandas](doc/source/images/inserted_pandas.png)
-
-> **Note**: There is an [issue](https://github.com/IBM/pixiedust-facebook-analysis/issues/39) that causes failure of non utf-8 encodings that requires a workaround. You would fix this in the cell above by adding an encoding parameter to read_csv(). For our `example_facebook_data.csv`:
-
-```python
-df_data_1 = pd.read_csv(body, encoding='latin-1')
-```
 
 #### Fix-up df variable name
 
