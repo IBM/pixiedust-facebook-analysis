@@ -3,7 +3,7 @@ cache:
   directories:
   - "node_modules"
 node_js:
-- 8
+  - "lts/*"
 before_script:
 - npm install -g markdownlint-cli
 script:
