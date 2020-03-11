@@ -115,7 +115,7 @@ described in detail below.
 
 Find the notebook cell after `1.5. Add Service Credentials From IBM Cloud for Watson Services`.
 
-Replace the six placeholder values with information from the `Service Credentials` tab for each service.
+Set the API key and URL for each service.
 
 ![add_credentials](doc/source/images/add_credentials.png)
 
