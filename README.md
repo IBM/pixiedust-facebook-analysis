@@ -101,9 +101,10 @@ described in detail below.
   * Enter a `Name` for the notebook and optionally a description. [2]
   * For `Select runtime` select the `Default Python 3.6 Free` option. [3]
   * Under `Notebook URL` provide the following url [4]:
-    ```url
-    https://raw.githubusercontent.com/IBM/pixiedust-facebook-analysis/master/notebooks/pixiedust_facebook_analysis.ipynb
-    ```
+
+  ```url
+  https://raw.githubusercontent.com/IBM/pixiedust-facebook-analysis/master/notebooks/pixiedust_facebook_analysis.ipynb
+  ```
 
   ![new_notebook](doc/source/images/new_notebook.png)
 
