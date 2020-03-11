@@ -1,6 +1,6 @@
 # Uncover insights from Facebook data with Watson services
 
-In this code pattern, we will use a Jupyter notebook to glean insights from a vast body of unstructured data. We'll start with data exported from Facebook Analytics. We'll use Watson Studio and enrich the data with Watson’s Natural Language Understanding (NLU) and Visual Recognition.
+In this code pattern, we will use a Jupyter notebook with Watson Studio to glean insights from a vast body of unstructured data. We'll start with data exported from Facebook Analytics. We'll use Watson’s Natural Language Understanding and Visual Recognition to enrich the data.
 
 We'll use the enriched data to answer questions like:
 
@@ -68,7 +68,7 @@ described in detail below.
 
 * Enter a project name.
 
-* Choose and existing Object Storage instance or create a new one.
+* Choose an existing Object Storage instance or create a new one.
 
 * Click `Create`.
 
@@ -214,13 +214,13 @@ After all the prep work done earlier, you'll see that there is almost no code ne
 display(<data-frame>)
 ```
 
-You should also notice that we used ```display(tones)``` in two different cells, but the result was two different charts. How can that happen? Well, we used cell metadata to tell PixieDust how to display the data. Notice the `Edit Metadata` button on each cell. If you don't see it, use the menu `View > Cell Toolbar > Edit Metadata` to make it visible. If you look at the metadata for the first two charts, you'll see how we got a bar chart and a pie chart.
+You should also notice that we used ```display(tones)``` in two different cells, but the result was two different charts. How can that happen? Well, we used cell metadata to define how to display the data. Notice the `Edit Metadata` button on each cell. If you don't see it, use the menu `View > Cell Toolbar > Edit Metadata` to make it visible. If you look at the metadata for the first two charts, you'll see how we got a bar chart and a pie chart.
 
 ![emotional_engagement](doc/source/images/emotional_engagement.png)
 
 ![sentimental_engagement](doc/source/images/sentimental_engagement.png)
 
-**PixieDust is interactive!** This is where we explore to find out what the enriched data will tell us.
+This is where we explore to find out what the enriched data will tell us.
 
 Use the `Options` button to change the chart settings. The first chart shows post consumption by the detected emotion in the article. Notice how changing the aggregation type from SUM to AVG gives you a very different conclusion. You can also change it to COUNT to see the frequency of each emotion, but when you do that the metric no longer matters.
 
