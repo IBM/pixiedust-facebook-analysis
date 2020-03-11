@@ -1,16 +1,18 @@
-# Uncover insights from Facebook data with PixieDust and Watson services
+# Uncover insights from Facebook data with Watson services
 
-In this code pattern, we will use a Jupyter notebook to glean insights from a vast body of unstructured data. We'll start with data exported from Facebook Analytics. We'll enrich the data with Watson’s Natural Language Understanding (NLU), Tone Analyzer and Visual Recognition. Credit goes to [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) and [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) for providing the initial notebook design.
+In this code pattern, we will use a Jupyter notebook with Watson Studio to glean insights from a vast body of unstructured data. We'll start with data exported from Facebook Analytics. We'll use Watson’s Natural Language Understanding and Visual Recognition to enrich the data.
 
 We'll use the enriched data to answer questions like:
 
-> What sentiment is most prevalent in the posts with the highest engagement performance?
+> What emotion is most prevalent in the posts with the highest engagement?
 
-> What are the relationships between social tone of article text, the main article entity, and engagement performance?
+> What sentiment has the higher engagement score on average?
+
+> What are the top keywords, entities or images measured by total reach?
 
 These types of insights are especially beneficial for marketing analysts who are interested in understanding and improving brand perception, product performance, customer satisfaction, and ways to engage their audiences.
 
-It is important to note that this code pattern is meant to be used as a guided experiment, rather than an application with one set output. The standard Facebook Analytics export features text from posts, articles, and thumbnails, along with standard Facebook performance metrics such as likes, shares, and impressions. This unstructured content was then enriched with Watson APIs to extract keywords, entities, sentiment, and tone.
+It is important to note that this code pattern is meant to be used as a guided experiment, rather than an application with one set output. The standard Facebook Analytics export features text from posts, articles, and thumbnails, along with standard Facebook performance metrics such as likes, shares, and impressions. This unstructured content was then enriched with Watson APIs to extract keywords, entities, sentiment, and emotion.
 
 After data is enriched with Watson APIs, there are several different types of ways to analyze it. Watson Studio provides a robust, yet flexible method of exploring the unstructured, enriched Facebook content.
 
@@ -19,12 +21,9 @@ This code pattern provides mock Facebook data, a notebook, and comes with severa
 When the reader has completed this code pattern, they will understand how to:
 
 * Read external data in to a Jupyter Notebook via Object Storage and pandas DataFrames.
-* Use a Jupyter notebook and Watson APIs to enrich unstructured data using:
-  * [Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understanding/)
-  * [Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/)
-  * [Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/)
+* Use a Jupyter notebook and Watson APIs to enrich unstructured data.
 * Write data from a pandas DataFrame in a Jupyter Notebook out to a file in Object Storage.
-* Visualize and explore the enriched data with [PixieDust](https://github.com/pixiedust/pixiedust).
+* Visualize and explore the enriched data.
 
 ## Flow
 
@@ -35,23 +34,17 @@ When the reader has completed this code pattern, they will understand how to:
 1. The data is enriched with Natural Language Understanding.
 1. The data is enriched with Tone Analyzer.
 1. The data is enriched with Visual Recognition.
-1. The enriched data can be explored with PixieDust to uncover hidden insights and create graphics to highlight them.
+1. Visualize the enriched data to uncover hidden insights and create graphics to highlight them.
 
 ## Included components
 
 * [IBM Watson Studio](https://dataplatform.cloud.ibm.com): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 * [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-object-storage): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 * [Watson Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understanding/): Natural language processing for advanced text analysis.
-* [Watson Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/): Uses linguistic analysis to detect communication tones in written text.
 * [Watson Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/): Understand image content.
 * [Jupyter Notebooks](https://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
-* [PixieDust](https://github.com/pixiedust/pixiedust): PixieDust is an open source helper library that works as an add-on to Jupyter notebooks to improve the user experience of working with data.
 * [pandas](https://pandas.pydata.org/): A Python library providing high-performance, easy-to-use data structures.
 * [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/): Beautiful Soup is a Python library for pulling data out of HTML and XML files.
-
-## Watch the Video
-
-[![video](https://img.youtube.com/vi/UIkjFo9o3vI/0.jpg)](https://www.youtube.com/watch?v=UIkjFo9o3vI)
 
 ## Steps
 
@@ -73,21 +66,22 @@ described in detail below.
 
 * Create a new project by clicking `New project +` and then click on `Create an empty project`.
 
-* Enter a name for the project name and click `Create`.
+* Enter a project name.
 
-  > **NOTE**: By creating a project in Watson Studio a free tier `Object Storage` service and `Watson Machine Learning` service will be created in your IBM Cloud account. Select the `Free` storage type to avoid fees.
+* Choose an existing Object Storage instance or create a new one.
+
+* Click `Create`.
 
 * Upon a successful project creation, you are taken to the project `Overview` tab. Take note of the `Assets` and `Settings` tabs, we'll be using them to associate our project with any external assets (datasets and notebooks) and any IBM cloud services.
 
-  ![studio-project-dashboard](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/overview-empty.png)
+  ![studio-project-overview](doc/source/images/studio_project_overview.png)
 
 ### 2. Add services to the project
 
 * Associate the project with Watson services. To create an instance of each service, go to the `Settings` tab in the new project and scroll down to `Associated Services`. Click `Add service` and select `Watson` from the drop-down menu. Add the service using the free `Lite` plan. Repeat for each of the services used in this pattern:
 
-  * Visual Recognition
   * Natural Language Understanding
-  * Tone Analyzer
+  * Visual Recognition (optional)
 
 * Once your services are created, copy the credentials and save them for later. You will use them in your Jupyter notebook.
 
@@ -99,7 +93,7 @@ described in detail below.
 
 * From the new project `Overview` tab, click `+ Add to project` on the top right and choose the `Notebook` asset type.
 
-  ![studio-project-dashboard](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/add-assets-notebook.png)
+  ![add_notebook.png](doc/source/images/add_notebook.png)
 
 * Fill in the following information:
 
@@ -113,7 +107,7 @@ described in detail below.
 
   ![new_notebook](doc/source/images/new_notebook.png)
 
-* Click the `Create Notebook` button.
+* Click the `Create notebook` button.
 
   > **TIP:** Your notebook will appear in the `Notebooks` section of the `Assets` tab.
 
@@ -121,7 +115,7 @@ described in detail below.
 
 Find the notebook cell after `1.5. Add Service Credentials From IBM Cloud for Watson Services`.
 
-Replace the six placeholder values with information from the `Service Credentials` tab for each service.
+Set the API key and URL for each service.
 
 ![add_credentials](doc/source/images/add_credentials.png)
 
@@ -131,7 +125,7 @@ Replace the six placeholder values with information from the `Service Credential
 
 #### Add the CSV file to the notebook
 
-Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. From there you can click `browse` and add a `.csv` file from your computer.
+Use `Find and Add Data` (look for the `01/00` icon) and its `Files` tab. From there you can click `browse` and add a `.csv` file from your computer.
 
 ![add_file](doc/source/images/add_file.png)
 
@@ -141,7 +135,7 @@ Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. From th
 
 Find the notebook cell after `2.1 Load data from Object Storage`. Place your cursor after `# **Insert to code > Insert pandas DataFrame**`. Make sure this cell is selected before inserting code.
 
-Using the file that you added above (under the `10/01` Files tab), use the `Insert to code` drop-down menu. Select `Insert pandas DataFrame` from the drop-down menu.
+Using the file that you added above (under the `01/00` Files tab), use the `Insert to code` drop-down menu. Select `pandas DataFrame` from the drop-down menu.
 
 ![insert_to_code](doc/source/images/insert_to_code.png)
 
@@ -203,33 +197,36 @@ If you walk through the cells, you will see that we demonstrated how to do the f
 * Do some data manipulation with pandas
 * Use BeautifulSoup
 * Use Natural Language Understanding
-* Use Tone Analyzer
 * Use Visual Recognition
 * Save the enriched data in a CSV file in Object Storage
 
 ### Part II - Data Preparation
 
-In Part II, we used pandas to create multiple DataFrames from our main enriched DataFrame. After slicing and dicing and cleaning, these new DataFrames are ready for PixieDust to use.
+In Part II, we used pandas to create multiple DataFrames from our main enriched DataFrame.
 
 ### Part III - Analyze
 
-In Part III, we analyze the results by exploring and visualizing the metrics with PixieDust.
+In Part III, we analyze the results by exploring and visualizing the metrics.
 
-After all the prep work done earlier, you'll see that there is almost no code needed here (thanks to PixieDust). We just use one-liners like this:
+After all the prep work done earlier, you'll see that there is almost no code needed here. We just use one-liners like this:
 
 ```python
 display(<data-frame>)
 ```
 
-You should also notice that we used ```display(tones)``` in two different cells, but the result was two different charts. How can that happen? Well, we used cell metadata to tell PixieDust how to display the data. Notice the `Edit Metadata` button on each cell. If you don't see it, use the menu `View > Cell Toolbar > Edit Metadata` to make it visible. If you look at the metadata for the first two charts, you'll see how we got a bar chart and a pie chart.
+You should also notice that we used ```display(tones)``` in two different cells, but the result was two different charts. How can that happen? Well, we used cell metadata to define how to display the data. Notice the `Edit Metadata` button on each cell. If you don't see it, use the menu `View > Cell Toolbar > Edit Metadata` to make it visible. If you look at the metadata for the first two charts, you'll see how we got a bar chart and a pie chart.
 
-**PixieDust is interactive!** This is where we explore to find out what the enriched data will tell us.
+![emotional_engagement](doc/source/images/emotional_engagement.png)
+
+![sentimental_engagement](doc/source/images/sentimental_engagement.png)
+
+This is where we explore to find out what the enriched data will tell us.
 
 Use the `Options` button to change the chart settings. The first chart shows post consumption by the detected emotion in the article. Notice how changing the aggregation type from SUM to AVG gives you a very different conclusion. You can also change it to COUNT to see the frequency of each emotion, but when you do that the metric no longer matters.
 
 Explore by trying the following:
 
-* Use social tone as the key instead of emotion tone (or both).
+* Use emotion as the key instead of sentiment (or both).
 * Try other metrics such as lifetime negative feedback from users.
 * Try the different renderers.
 * Try different chart types (and a grid).
@@ -247,22 +244,9 @@ Under the `File` menu, there are several ways to save your notebook:
 
 ## Sample output
 
-The example output in [`examples`](examples) has embedded JavaScript for PixieDust charts. View it via [nbviewer](https://nbviewer.jupyter.org/github/IBM/pixiedust-facebook-analysis/blob/master/examples/pixiedust_facebook_analysis.ipynb)
+The example output in [`examples`](examples) has embedded JavaScript for charts. View it via nbviewer [here](https://nbviewer.jupyter.org/github/IBM/pixiedust-facebook-analysis/blob/master/examples/pixiedust_facebook_analysis.ipynb).
 
 > **Note**: Some interactive functionality might not work in the saved example. Run the notebook for full functionality. To see the code and markdown cells without output, you can view [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb) with the Github viewer.
-
-## Links
-
-* [Demo on Youtube](https://www.youtube.com/watch?v=UIkjFo9o3vI)
-* [PixieDust Documentation](https://pixiedust.github.io/pixiedust/)
-* [PixieDust GitHub Repo](https://github.com/pixiedust/pixiedust)
-* [Facebook Analytics Developer Docs](https://developers.facebook.com/docs/analytics)
-
-## Learn more
-
-* **Artificial Intelligence Code Patterns**: Enjoyed this Code Pattern? Check out our other [AI Code Patterns](https://developer.ibm.com/technologies/artificial-intelligence/)
-* **Data Analytics Code Patterns**: Enjoyed this Code Pattern? Check out our other [Data Science Code Patterns](https://developer.ibm.com/technologies/data-science/)
-* **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
 
 ## License
 
