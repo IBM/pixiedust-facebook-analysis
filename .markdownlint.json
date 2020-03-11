@@ -1,0 +1,24 @@
+{
+    "_docs_for_this_file": "https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md",
+    "line-length": false,
+    "first-line-h1": false,
+    "header-style": {
+        "style": "atx"
+    },
+    "ul-style": {
+        "style": "asterisk"
+    },
+    "required-headers": {
+        "headers": [
+            "*",
+            "## Flow",
+            "## Included components",
+            "## Featured technologies",
+            "## Watch the Video",
+            "## Steps",
+            "*",
+            "## License"
+        ]
+    },
+    "no-blanks-blockquote": false
+}
