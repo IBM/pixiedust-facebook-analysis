@@ -2,6 +2,10 @@
 
 # Uncover insights from Facebook data with Watson services
 
+## WARNING: This repository is no longer maintained. 
+
+This repository will not be updated. The repository will be kept available in read-only mode.
+
 In this code pattern, we will use a Jupyter notebook with Watson Studio to glean insights from a vast body of unstructured data. We'll start with data exported from Facebook Analytics. We'll use Watson’s Natural Language Understanding and Visual Recognition to enrich the data.
 
 We'll use the enriched data to answer questions like:
